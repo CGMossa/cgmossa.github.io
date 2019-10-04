@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+
+<head>
+<meta name="google-site-verification" content="9hONQNgRDyVvEWEbXR5IDW6rsfdYuluYPHBpvFgBjzA" />	
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-105088919-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+	
+<title>Software tools for planning FECRT studies and analysing FECRT data</title>
+<link href="style.css" rel="stylesheet" type="text/css"/>
+
+</head>
+ 
+<body style="text-align: left; ">
+	
+	<h1>Software tools for planning FECRT studies and analysing FECRT data</h1>
+	<p style="text-align:center">Page last updated by Matthew Denwood on 14th November 2018</p>
+	
+	<h2>OVERVIEW</h2>
+	
+	<p>This website houses the web applications presented at the <a href="http://www.waavp2017kl.org">26th International Conference of the World Association for the Advancement of Veterinary Parasitology</a> on 5th September 2017 in Kuala Lumpur, Malaysia, and the <a href="http://isvee.net">15h International Symposium of Veterinary Epidemiology and Economics</a> on 15th November 2018 in Chiang Mai, Thailand.  The software is primarily intended for use with faecal egg count reduction test (FECRT) data, but are equally applicable to other situations where the ratio of means of two sets of over-dispersed count distributions (which are assumed to be close to Negative Binomial) is to be compared to a given target.</p>
+	<p>For more information about the people behind this work (including contact details), see <a href="about">this page</a>.  The web applications are feature complete but are still being tested, so if you encounter any unusual results please do let us know.  The supporting website itself is still under development.</p>
+	
+	<h2>POWER ANALYSIS</h2>
+
+	<p>This web application provides a Monte Carlo approximation of the power associated with a prospective FECRT study for both an inferiority test and a non-inferioirty test of the simulated reduction compared to a given target and non-inferiority margin.  The p-values associated with the two tests at each iteration are obtained using the BNB method (see below).  Estimates of the variability (over-dispersion parameter k) of the Negative Binomial distributions are also required.  Several power calculations can be performed within the same session, and results can be downloaded in comma separated value (CSV) format for examination in Excel (this also provides additional information on e.g. the type 1 error rate associated with the two tests).  For help with parameter values and more details of the underlying statistics see <a href="power">this page</a>.</p>
+	
+	<p><a href="https://mdenwood.shinyapps.io/fecrt_power/"><b>WEB APP FOR POWER ANALYSIS</b></a></p>
+	
+	<h2>BNB METHOD</h2>
+
+	<p>This web application implements a hybrid Frequentist/Bayesian analysis method for existing FECRT data.  The method is theoretically best justified for unpaired data (with separate treatment and control individuals), but has also been shown to work empirically well enough for paired data (where the same individuals are sampled before and after treatment).  To examine the type 1 error rates for any given set of parameters, use the power analysis tool (above) and click the link to download the results as a CSV file.  For help with data entry and more details of the underlying statistics see <a href="BNB">this page</a>.</p>
+
+	<p><a href="https://mdenwood.shinyapps.io/fecrt_bnb/"><b>WEB APP FOR DATA ANALYSIS</b></a></p>
+	
+	<h2>OTHER LINKS</h2>
+
+	<p>This section is still under development, but it is planned to provide R code so that more complex power analysis studies (and repeated data analyses) can be run locally in R rather than remotely on the web apps provided.  If you use R and are interested in obtaining some code to use these tools please <a href="about">contact me</a>.</p>
+	
+	<h2>REFERENCES</h2>
+	
+	<p>A manuscript detailing the statistical methods used for these tools is currently being prepared for submission.  Once a pre-print is available, a link will be given here.</p>
+
+	<h2>FEEDBACK</h2>
+	
+	<p>This website is currently being developed, and all feedback and criticism are very welcome (<a href="about">contact details</a>).  I am particularly interested in datasets for which the analysis method gives implausible results, any errors obtained from the online tools, and enquries about collaboration regarding analysis of more compelx datasets.  I am also happy to let you know when the website is updated if you send me a request to do so!</p>
+	
+	<h2>ACKNOWLEDGEMENTS AND CITATION</h2>
+	
+	<p>The work behind these web applications has been (slowly) developed starting with <a href="http://theses.gla.ac.uk/1837/">my PhD at the University of Glasgow</a> and continuing after my move to the <a href="http://ivh.ku.dk/english/employees/?pure=en/persons/487288">University of Copenhagen</a>.  I am grateful to all the coauthors that have contributed to this work, as well as the Universities and funding bodies that have financially supported me over the years.</p>
+	<p>As a primarily academic exercise, it is very important to be able to demonstrate that this software is being used in order to be able to continue development.  If you use these tools as part of any published work, please ensure to cite the following conference publication:</p>
+	<p style="font-style: italic; ">Denwood MJ, McKendrick IJ, Matthews L, Prentice JC, Reid SWJ, Innocent GT (2017). A simple and robust statistical framework for planning, analysing and interpreting faecal egg count reduction test (FECRT) studies. In: 26th International Conference of the World Association for the Advancement of Veterinary Parasitology. URL: http://www.fecrt.com</p>
+	<p>[Note that this citation will at some point be updated with a more detailed peer-reviewed publication]</p>
+	
+	<h2>LICENSE AND DISCLAIMER</h2>
+	
+	<p>The software used by this website is open source and freely available under the General Public License (version 2).  All advice contained on this website and given by the linked web applications is provided freely under the same license, and absolutely without any form of warranty or guarantee.</p>
+	
+	<table class="headertable"> 
+		<tr>
+			<td style="vertical-align:middle; text-align:left; width:33%">
+				<p about=""
+				     resource="http://www.w3.org/TR/rdfa-syntax"
+				     rel="dc:conformsTo" xmlns:dc="http://purl.org/dc/terms/">
+				    <a target="_blank" href="http://validator.w3.org/check?uri=http%3A%2F%2Fwww.fecrt.com"><img
+				      src="http://www.w3.org/Icons/valid-xhtml-rdfa" alt="Valid XHTML + RDFa" style="border:0;width:60px;height:20px" /></a>
+				</p>		
+			</td>
+			<td style="vertical-align:middle; text-align:left; width:33%">		
+				<p>
+				    <a target="_blank" href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.fecrt.com">
+				        <img style="border:0;width:60px;height:20px"
+				            src="http://jigsaw.w3.org/css-validator/images/vcss"
+				            alt="Valid CSS!" />
+				    </a>
+				</p>
+			</td>
+			<td style="vertical-align:middle; text-align:left; width:34%">		
+					<script type="text/javascript">
+					//<![CDATA[
+					document.write('<iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.fecrt.com%2F&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=true&amp;action=like&amp;colorscheme=dark&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowTransparency="true"><\/iframe>');
+					//]]>
+					</script>
+			</td>
+		</tr>
+	</table>
+
+</body>
+  
+</html>
