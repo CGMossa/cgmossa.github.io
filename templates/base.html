@@ -4,7 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% block title %}{{ config.title }}{% endblock %}</title>
-  <meta name="description" content="{% block description %}{{ config.description }}{% endblock %}">
+  {% if page is defined and page.description %}
+  <meta name="description" content="{{ page.description }}">
+  {% elif section is defined and section.description %}
+  <meta name="description" content="{{ section.description }}">
+  {% else %}
+  <meta name="description" content="{{ config.description }}">
+  {% endif %}
+  <meta name="theme-color" content="#511660">
   <link rel="stylesheet" href="{{ get_url(path='style.css', cachebust=true) }}">
   <link rel="alternate" type="application/atom+xml" title="RSS" href="{{ get_url(path='atom.xml', trailing_slash=false) }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">

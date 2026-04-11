@@ -16,5 +16,8 @@ render_emoji = true
 lazy_async_image = true
 insert_anchor_links = "heading"
 
+[link_checker]
+internal_level = "warn"
+
 [extra]
 author = "Mossa Merhi Reimert"
