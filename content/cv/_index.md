@@ -28,7 +28,7 @@ contributor in the Rust ecosystem.
 <div class="cv-meta">University of Copenhagen &middot; 2024 &ndash; 2025</div>
 <ul>
 <li>Developed computational models of disease spread</li>
-<li>Maintainer of several R packages</li>
+<li>Developer of R packages</li>
 </ul>
 </div>
 
