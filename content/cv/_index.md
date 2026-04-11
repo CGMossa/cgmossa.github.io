@@ -137,7 +137,7 @@ contributor in the Rust ecosystem.
 </div>
 
 <div class="cv-section">
-<h2>Selected Publications</h2>
+<h2>Publications</h2>
 <ul>
 <li><strong>Modelling PRRS transmission between pig herds in Denmark and prediction of interventions impact</strong> (2025) &mdash; <a href="https://doi.org/10.1016/j.prevetmed.2025.106692">doi:10.1016/j.prevetmed.2025.106692</a></li>
 <li><strong>Choice of landscape discretisation method affects the inferred rate of spread in wildlife disease spread models</strong> (2025) &mdash; <a href="https://doi.org/10.1016/j.jtbi.2024.111963">doi:10.1016/j.jtbi.2024.111963</a></li>

@@ -398,6 +398,10 @@ pre {
     border-bottom: 2px solid $color-primary;
     margin-bottom: 1.2rem;
   }
+  ul a {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
 }
 
 .skills-grid {
