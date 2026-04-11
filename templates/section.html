@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}{{ section.title }} | {{ config.title }}{% endblock %}
+
+{% block content %}
+<article class="section-page">
+  <h1>{{ section.title }}</h1>
+  {{ section.content | safe }}
+
+  {% if section.pages | length > 0 %}
+  <ul class="post-list">
+    {% for page in section.pages %}
+    <li>
+      <a href="{{ page.permalink }}">{{ page.title }}</a>
+      <span class="post-list-meta">
+        {% if page.date %}
+        <time>{{ page.date | date(format="%b %d, %Y") }}</time>
+        {% endif %}
+        {% if page.reading_time %}
+        <span class="reading-time">{{ page.reading_time }} min</span>
+        {% endif %}
+      </span>
+      {% if page.description %}
+      <span class="post-desc">{{ page.description }}</span>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+
+  {% if paginator is defined %}
+  <nav class="pagination">
+    {% if paginator.previous %}
+    <a href="{{ paginator.previous }}">&larr; Newer</a>
+    {% endif %}
+    <span>Page {{ paginator.current_index }} of {{ paginator.number_pagers }}</span>
+    {% if paginator.next %}
+    <a href="{{ paginator.next }}">Older &rarr;</a>
+    {% endif %}
+  </nav>
+  {% endif %}
+</article>
+{% endblock %}

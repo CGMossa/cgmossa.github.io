@@ -1,2 +1,0 @@
-# cgmossa.github.io
-Website

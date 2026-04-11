@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="hero">
+  <h1>Mossa Merhi Reimert</h1>
+  <p class="hero-subtitle">Researcher &middot; Developer &middot; Open-Source Maintainer</p>
+  <p class="hero-summary">
+    R/Rust programmer and statistical &amp; mathematical modeller.
+    Senior Scientific Software Engineer at <a href="https://a2-ai.com"><strong>A2-Ai</strong></a>.
+    Collaborator first &mdash; I like solving specific problems in cross-disciplinary contexts.
+  </p>
+  <div class="hero-links">
+    <a href="https://github.com/cgmossa" class="btn" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://orcid.org/0009-0007-9297-1523" class="btn btn-outline" target="_blank" rel="noopener">ORCID</a>
+    <a href="https://www.linkedin.com/in/cgmossa" class="btn btn-outline" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+</section>
+
+<section class="home-section">
+  <h2>About</h2>
+  <p>
+    Developer, teacher, researcher &mdash; I've worn all three hats and enjoy the overlap
+    between them. I'm a core maintainer of
+    <a href="https://github.com/extendr/extendr">extendr</a>, which bridges R and Rust,
+    and my research background is in epidemiological modelling, simulator-based inference,
+    and spatial disease spread.
+  </p>
+  <p>
+    I love vibe coding and am an avid user of Claude and Codex. Active in the
+    <a href="https://cph.rs">cph.rs</a> community &mdash; Copenhagen's monthly Rust meetup
+    for sharing projects, crates, and all things Rust. Father of two.
+  </p>
+</section>
+
+<section class="home-section">
+  <h2>Recent posts</h2>
+  {% set blog = get_section(path="blog/_index.md") %}
+  {% if blog.pages | length > 0 %}
+  <ul class="post-list">
+    {% for page in blog.pages | slice(end=5) %}
+    <li>
+      <a href="{{ page.permalink }}">{{ page.title }}</a>
+      <time>{{ page.date | date(format="%b %d, %Y") }}</time>
+    </li>
+    {% endfor %}
+  </ul>
+  <a href="{{ get_url(path='@/blog/_index.md') }}" class="read-more">All posts &rarr;</a>
+  {% else %}
+  <p class="muted">Posts coming soon.</p>
+  {% endif %}
+</section>
+{% endblock %}
