@@ -12,16 +12,22 @@
   <meta name="description" content="{{ config.description }}">
   {% endif %}
   <meta name="theme-color" content="#511660">
+  <meta property="og:title" content="{% block og_title %}{{ config.title }}{% endblock %}">
+  <meta property="og:description" content="{% if page is defined and page.description %}{{ page.description }}{% elif section is defined and section.description %}{{ section.description }}{% else %}{{ config.description }}{% endif %}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{% if current_url is defined %}{{ current_url }}{% else %}{{ config.base_url }}{% endif %}">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="{{ get_url(path='favicon.svg') }}" type="image/svg+xml">
   <link rel="stylesheet" href="{{ get_url(path='style.css', cachebust=true) }}">
   <link rel="alternate" type="application/atom+xml" title="RSS" href="{{ get_url(path='atom.xml', trailing_slash=false) }}">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
   <nav class="site-nav">
     <div class="nav-inner">
-      <a class="nav-logo" href="{{ get_url(path='/') }}">MMR</a>
+      <a class="nav-logo" href="{{ get_url(path='/') }}">Mossa Reimert</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" onclick="this.classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
       <div class="nav-links">
         <a href="{{ get_url(path='/') }}" {% if current_path is defined and current_path == "/" %}class="active"{% endif %}>Home</a>
         <a href="{{ get_url(path='@/cv/_index.md') }}" {% if current_path is defined and current_path is starting_with("/cv") %}class="active"{% endif %}>CV</a>

@@ -6,10 +6,12 @@ template = "section.html"
 <div class="cv-section">
 <h2>Summary</h2>
 <p>
-An R/Rust programmer, and a statistical &amp; mathematical modeller. I'm a collaborator
-first, and like to solve specific problems in cross-disciplinary contexts.
-I've been a developer, a teacher, and a researcher, and open-source maintainer
-(<a href="https://github.com/extendr/extendr">extendr</a>).
+Senior Scientific Software Engineer at <a href="https://a2-ai.com">A2-Ai</a>.
+PhD in Veterinary Epidemiology from the University of Copenhagen.
+Over a decade of experience spanning data science, academic research, teaching,
+and software development. Core maintainer of
+<a href="https://github.com/extendr/extendr">extendr</a> and active open-source
+contributor in the Rust ecosystem.
 </p>
 </div>
 
@@ -25,16 +27,8 @@ I've been a developer, a teacher, and a researcher, and open-source maintainer
 <h3>Postdoctoral Researcher</h3>
 <div class="cv-meta">University of Copenhagen &middot; 2024 &ndash; 2025</div>
 <ul>
-<li>Developing computational models of disease spread</li>
+<li>Developed computational models of disease spread</li>
 <li>Maintainer of several R packages</li>
-</ul>
-</div>
-
-<div class="cv-entry">
-<h3>External Lecturer</h3>
-<div class="cv-meta"><a href="https://dis.dk/">DIS Study Abroad</a>, Copenhagen &middot; Spring 2025</div>
-<ul>
-<li>Teaching "Artificial Neural Networks and Deep Learning" using PyTorch</li>
 </ul>
 </div>
 
@@ -70,6 +64,18 @@ I've been a developer, a teacher, and a researcher, and open-source maintainer
 <ul>
 <li>Applied signal processing methods to transform motion sensor data</li>
 <li>Designed and specified features for a sports activity tracking application</li>
+</ul>
+</div>
+</div>
+
+<div class="cv-section">
+<h2>Teaching</h2>
+
+<div class="cv-entry">
+<h3>External Lecturer</h3>
+<div class="cv-meta"><a href="https://dis.dk/">DIS Study Abroad</a>, Copenhagen &middot; Spring 2025</div>
+<ul>
+<li>Taught "Artificial Neural Networks and Deep Learning" using PyTorch</li>
 </ul>
 </div>
 
@@ -123,6 +129,7 @@ I've been a developer, a teacher, and a researcher, and open-source maintainer
 <span class="skill-tag">Git &amp; GitHub Actions</span>
 <span class="skill-tag">MATLAB</span>
 <span class="skill-tag">Python</span>
+<span class="skill-tag">PyTorch</span>
 <span class="skill-tag">C#</span>
 <span class="skill-tag">C / C++</span>
 <span class="skill-tag">Bash</span>
@@ -132,19 +139,19 @@ I've been a developer, a teacher, and a researcher, and open-source maintainer
 <div class="cv-section">
 <h2>Selected Publications</h2>
 <ul>
-<li><strong>Modelling PRRS transmission between pig herds in Denmark and prediction of interventions impact</strong> (2025) — <a href="https://doi.org/10.1101/2025.05.09.653077">doi:10.1101/2025.05.09.653077</a></li>
-<li><strong>Choice of landscape discretisation method affects the inferred rate of spread in wildlife disease spread models</strong> (2025)</li>
-<li><strong>Assessing the Spatial and Temporal Risk of HPAIV Transmission to Danish Cattle via Wild Birds</strong> (2025)</li>
-<li><strong>extendr: Frictionless bindings for R and Rust</strong> (2024)</li>
-<li><strong>Social network analysis reveals the failure of between-farm movement restrictions to reduce Salmonella transmission</strong> (2024)</li>
-<li><strong>Using registry data to identify individual dairy cows with abnormal patterns in routinely recorded somatic cell counts</strong> (2024)</li>
+<li><strong>Modelling PRRS transmission between pig herds in Denmark and prediction of interventions impact</strong> (2025) &mdash; <a href="https://doi.org/10.1016/j.prevetmed.2025.106692">doi:10.1016/j.prevetmed.2025.106692</a></li>
+<li><strong>Choice of landscape discretisation method affects the inferred rate of spread in wildlife disease spread models</strong> (2025) &mdash; <a href="https://doi.org/10.1016/j.jtbi.2024.111963">doi:10.1016/j.jtbi.2024.111963</a></li>
+<li><strong>Assessing the Spatial and Temporal Risk of HPAIV Transmission to Danish Cattle via Wild Birds</strong> (2025) &mdash; <a href="https://doi.org/10.48550/arXiv.2504.12432">arXiv:2504.12432</a></li>
+<li><strong>extendr: Frictionless bindings for R and Rust</strong> (2024) &mdash; <a href="https://doi.org/10.21105/joss.06394">doi:10.21105/joss.06394</a></li>
+<li><strong>Social network analysis reveals the failure of between-farm movement restrictions to reduce Salmonella transmission</strong> (2024) &mdash; <a href="https://doi.org/10.3168/jds.2023-24554">doi:10.3168/jds.2023-24554</a></li>
+<li><strong>Using registry data to identify individual dairy cows with abnormal patterns in routinely recorded somatic cell counts</strong> (2024) &mdash; <a href="https://doi.org/10.1016/j.jtbi.2023.111718">doi:10.1016/j.jtbi.2023.111718</a></li>
 </ul>
 </div>
 
 <div class="cv-section">
 <h2>Awards</h2>
 <ul>
-<li>Aarhus' COVID-19 Datathon — organised by Aarhus University, Imperial College London, and MIT</li>
+<li>Aarhus' COVID-19 Datathon &mdash; organised by Aarhus University, Imperial College London, and MIT</li>
 </ul>
 </div>
 
