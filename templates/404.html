@@ -1,14 +1,11 @@
 {% extends "base.html" %}
 
-{% block title %}404 - Page not found | {{ config.title }}{% endblock %}
+{% block title %}404 — Page not found | {{ config.title }}{% endblock %}
 
 {% block content %}
-<article class="section-page error-page">
-  <div class="error-card">
-    <p class="eyebrow">404</p>
-    <h1>Page not found</h1>
-    <p>The page you were looking for does not exist, or it moved while I was busy rewriting the site.</p>
-    <p><a href="{{ get_url(path='/') }}" class="btn">Back to home</a></p>
-  </div>
+<article class="section-page">
+  <h1>404 — Page not found</h1>
+  <p>The page you're looking for doesn't exist or has been moved.</p>
+  <p><a href="{{ get_url(path='/') }}">Back to home</a></p>
 </article>
 {% endblock %}

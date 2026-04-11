@@ -1,162 +1,82 @@
 {% extends "base.html" %}
 
 {% block content %}
-{% set blog = get_section(path="blog/_index.md") %}
+<section class="hero">
+  <h1>Mossa Merhi Reimert</h1>
+  <p class="hero-subtitle">Software Engineer &middot; Researcher &middot; Open-Source Maintainer</p>
+  <p class="hero-summary">
+    R/Rust programmer and statistical &amp; mathematical modeller.
+    Senior Scientific Software Engineer at <a href="https://a2-ai.com"><strong>A2-Ai</strong></a>.
+    Collaborator first &mdash; I like solving specific problems in cross-disciplinary contexts.
+  </p>
+  <div class="hero-links">
+    <a href="https://github.com/cgmossa" class="btn" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://orcid.org/0009-0007-9297-1523" class="btn btn-outline" target="_blank" rel="noopener">ORCID</a>
+    <a href="https://www.linkedin.com/in/cgmossa" class="btn btn-outline" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+</section>
 
-<div class="home-page">
-  <section class="hero-home">
-    <div class="hero-copy">
-      <p class="eyebrow">Research software, modelling, and tooling</p>
-      <h1 class="hero-title">I build careful software for messy, real-world problems.</h1>
-      <p class="hero-lede">
-        I work at the overlap of R, Rust, statistics, and scientific computing.
-        My background spans academic research, teaching, and production engineering,
-        and I am most useful when a team needs someone who can move between those
-        modes without losing precision.
-      </p>
-      <div class="hero-links">
-        <a href="{{ get_url(path='@/projects/_index.md') }}" class="btn">See projects</a>
-        <a href="{{ get_url(path='@/cv/_index.md') }}" class="btn btn-outline">Read CV</a>
-        <a href="https://github.com/cgmossa" class="btn btn-ghost" target="_blank" rel="noopener">GitHub</a>
-      </div>
-      <div class="stat-grid">
-        <article class="stat-card">
-          <span class="stat-value">10+ years</span>
-          <span class="stat-label">across research, teaching, and software development</span>
-        </article>
-        <article class="stat-card">
-          <span class="stat-value">extendr</span>
-          <span class="stat-label">core maintainer of the R and Rust bridge</span>
-        </article>
-        <article class="stat-card">
-          <span class="stat-value">PhD</span>
-          <span class="stat-label">veterinary epidemiology, modelling, and inference</span>
-        </article>
-      </div>
-    </div>
+<section class="home-section">
+  <h2>About</h2>
+  <p>
+    I'm Mossa Merhi Reimert, PhD. Developer, teacher, researcher &mdash; I've worn all
+    three hats and enjoy the overlap between them. I'm a core maintainer of
+    <a href="https://github.com/extendr/extendr">extendr</a>, which bridges R and Rust,
+    and my research background is in epidemiological modelling, simulator-based inference,
+    and spatial disease spread.
+  </p>
+  <p>
+    I work on tooling and infrastructure that need to be both technically sound
+    and useful to other people. That includes open-source maintainership, research
+    software, and the work of turning prototype code into something another person
+    can run, inspect, and extend.
+  </p>
+</section>
 
-    <aside class="hero-panel">
-      <p class="panel-kicker">Currently</p>
-      <h2>Senior Scientific Software Engineer at <a href="https://a2-ai.com">A2-Ai</a></h2>
-      <p>
-        Building tools and workflows where research code has to survive contact
-        with users, deployment, and long-term maintenance.
-      </p>
-      <ul class="detail-list">
-        <li>Core maintainer of <a href="https://github.com/extendr/extendr">extendr</a>, the R to Rust interoperability project</li>
-        <li>Research background in simulator-based inference, spatial disease spread, and statistical modelling</li>
-        <li>Active in the <a href="https://cph.rs">cph.rs</a> community and interested in thoughtful technical collaboration</li>
-      </ul>
-    </aside>
-  </section>
+<section class="home-section">
+  <h2>Current work</h2>
+  <p>
+    At <a href="https://a2-ai.com">A2-Ai</a> I build scientific software in settings
+    where modelling, data, and product constraints meet. Outside of work, I spend
+    a lot of time on R and Rust interoperability, package infrastructure, and the
+    broader craft of making technical projects easier to maintain.
+  </p>
+  <p>
+    Active in the <a href="https://cph.rs">cph.rs</a> community, Copenhagen's monthly
+    Rust meetup. Father of two.
+  </p>
+</section>
 
-  <section class="home-band">
-    <div class="section-heading">
-      <p class="eyebrow">How I work</p>
-      <h2>Crossing research and engineering without dropping rigor</h2>
-      <p>
-        I gravitate toward problems that need both careful implementation and a
-        strong understanding of the domain behind the code.
-      </p>
-    </div>
+<section class="home-section">
+  <h2>Selected projects</h2>
 
-    <div class="feature-grid">
-      <article class="feature-card">
-        <h3>R and Rust tooling</h3>
-        <p>I spend a lot of time on interfaces, packaging, FFI, and the boring pieces that make difficult systems usable.</p>
-      </article>
-      <article class="feature-card">
-        <h3>Scientific modelling</h3>
-        <p>My research work has focused on epidemiological models, simulation, and inference under real-world constraints.</p>
-      </article>
-      <article class="feature-card">
-        <h3>Open-source maintainership</h3>
-        <p>I care about docs, CI, release processes, review, and making a project understandable to the next contributor.</p>
-      </article>
-      <article class="feature-card">
-        <h3>Teaching and translation</h3>
-        <p>I like turning complicated technical ideas into tools, explanations, and workflows that other people can actually use.</p>
-      </article>
-    </div>
-  </section>
+  <div class="project-card">
+    <h3><a href="https://github.com/extendr/extendr" target="_blank" rel="noopener">extendr</a></h3>
+    <p>
+      Frictionless bindings between R and Rust. I am a core maintainer of the
+      project and work on the broader tooling around the R-Rust bridge.
+    </p>
+    <div class="project-tags"><span>Rust</span><span>R</span><span>FFI</span></div>
+  </div>
 
-  <section class="home-band">
-    <div class="section-heading">
-      <p class="eyebrow">Selected work</p>
-      <h2>Projects close to the metal</h2>
-      <p>
-        Most of my work lives in the seam between research software and production-grade tooling:
-        interoperability layers, interpreters, modelling code, and infrastructure around them.
-      </p>
-    </div>
+  <div class="project-card">
+    <h3><a href="https://github.com/cgmossa/miniextendr" target="_blank" rel="noopener">miniextendr</a></h3>
+    <p>
+      A Rust-R interoperability framework for building R packages with Rust backends,
+      including ExternalPtr wrappers, ALTREP support, and CRAN-ready packaging.
+    </p>
+    <div class="project-tags"><span>Rust</span><span>R</span><span>CRAN</span></div>
+  </div>
 
-    <div class="project-grid">
-      <article class="project-card project-card-featured">
-        <h3><a href="https://github.com/extendr/extendr" target="_blank" rel="noopener">extendr</a></h3>
-        <p>Bindings between R and Rust with a focus on ergonomics, safety, and practical package development.</p>
-        <div class="project-tags"><span>Rust</span><span>R</span><span>FFI</span></div>
-      </article>
-      <article class="project-card project-card-featured">
-        <h3><a href="https://github.com/cgmossa/miniextendr" target="_blank" rel="noopener">miniextendr</a></h3>
-        <p>A modern R package interoperability framework with support for ExternalPtr wrappers, ALTREP, class systems, and CRAN-ready packaging.</p>
-        <div class="project-tags"><span>Rust</span><span>R</span><span>CRAN</span></div>
-      </article>
-      <article class="project-card project-card-featured">
-        <h3><a href="https://github.com/cgmossa/miniR" target="_blank" rel="noopener">miniR</a></h3>
-        <p>An R interpreter in Rust aimed at real package code, with native extension loading and growing compatibility coverage.</p>
-        <div class="project-tags"><span>Interpreter</span><span>Rust</span><span>Runtime</span></div>
-      </article>
-    </div>
-  </section>
+  <div class="project-card">
+    <h3><a href="https://github.com/cgmossa/miniR" target="_blank" rel="noopener">miniR</a></h3>
+    <p>
+      An R interpreter written in Rust, aimed at real package code rather than
+      toy examples, with growing compatibility and native extension loading.
+    </p>
+    <div class="project-tags"><span>Rust</span><span>R</span><span>Interpreter</span></div>
+  </div>
 
-  <section class="home-band home-band-split">
-    <div>
-      <div class="section-heading section-heading-compact">
-        <p class="eyebrow">Writing</p>
-        <h2>Recent posts</h2>
-      </div>
-      {% if blog.pages | length > 0 %}
-      <ul class="post-list post-list-compact">
-        {% for page in blog.pages | slice(end=4) %}
-        <li>
-          <div class="post-list-head">
-            <a href="{{ page.permalink }}">{{ page.title }}</a>
-            {% if page.date %}
-            <time>{{ page.date | date(format="%b %d, %Y") }}</time>
-            {% endif %}
-          </div>
-          {% if page.description %}
-          <p class="post-desc">{{ page.description }}</p>
-          {% endif %}
-          {% if page.taxonomies.tags is defined %}
-          <div class="mini-tags">
-            {% for tag in page.taxonomies.tags | slice(end=3) %}
-            <a href="{{ get_taxonomy_url(kind="tags", name=tag) }}" class="tag">{{ tag }}</a>
-            {% endfor %}
-          </div>
-          {% endif %}
-        </li>
-        {% endfor %}
-      </ul>
-      <a href="{{ get_url(path='@/blog/_index.md') }}" class="read-more">Browse the archive &rarr;</a>
-      {% else %}
-      <p class="muted">Posts coming soon.</p>
-      {% endif %}
-    </div>
-
-    <aside class="callout-card">
-      <p class="panel-kicker">Elsewhere</p>
-      <h2>Research profile, open source, and community work</h2>
-      <p>
-        If you are looking for code, publications, or a clearer picture of my background,
-        these are the best places to continue.
-      </p>
-      <ul class="detail-list">
-        <li><a href="https://orcid.org/0009-0007-9297-1523">ORCID</a> for publications and identifiers</li>
-        <li><a href="https://github.com/cgmossa">GitHub</a> for active open-source work</li>
-        <li><a href="https://www.linkedin.com/in/cgmossa">LinkedIn</a> for the short professional version</li>
-      </ul>
-    </aside>
-  </section>
-</div>
+  <a href="{{ get_url(path='@/projects/_index.md') }}" class="read-more">More projects &rarr;</a>
+</section>
 {% endblock %}

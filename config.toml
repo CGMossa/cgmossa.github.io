@@ -1,13 +1,9 @@
 base_url = "https://cgmossa.github.io"
 title = "Mossa Merhi Reimert"
-description = "Personal website of Mossa Merhi Reimert, building research software, modelling tools, and open-source R/Rust infrastructure."
+description = "Personal website of Mossa Merhi Reimert — researcher, developer, and open-source maintainer"
 default_language = "en"
 compile_sass = true
 minify_html = true
-generate_feeds = true
-feed_filenames = ["atom.xml"]
-feed_limit = 20
-taxonomies = [{ name = "tags", feed = true }]
 
 [markdown]
 highlighting = { theme = "dracula", enabled = true }
@@ -21,5 +17,3 @@ internal_level = "warn"
 
 [extra]
 author = "Mossa Merhi Reimert"
-location = "Copenhagen, Denmark"
-social_image = "social-card.svg"
