@@ -521,18 +521,34 @@ pre {
   }
 }
 
+// ── Theme Toggle ──────────────────────────────────────
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $color-text-muted;
+  transition: color 0.2s;
+  &:hover { color: $color-primary; }
+  svg { width: 20px; height: 20px; }
+  .icon-moon { display: block; }
+  .icon-sun { display: none; }
+}
+
 // ── Dark Mode ─────────────────────────────────────────
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #1a1a2e;
-    --surface: #222240;
-    --text: #e4e4ef;
-    --text-muted: #9a9ab0;
-    --primary: #c084fc;
-    --accent: #7cacf8;
-    --border: #333355;
-    --hover: rgba(192, 132, 252, 0.12);
-  }
+[data-theme="dark"] {
+  --bg: #1a1a2e;
+  --surface: #222240;
+  --text: #e4e4ef;
+  --text-muted: #9a9ab0;
+  --primary: #c084fc;
+  --accent: #7cacf8;
+  --border: #333355;
+  --hover: rgba(192, 132, 252, 0.12);
 
   body {
     background: var(--bg);
@@ -562,6 +578,13 @@ pre {
   }
 
   .nav-toggle span { background: var(--text); }
+
+  .theme-toggle {
+    color: var(--text-muted);
+    &:hover { color: var(--primary); }
+    .icon-moon { display: none; }
+    .icon-sun { display: block; }
+  }
 
   .hero { border-bottom-color: var(--border); }
   .hero h1 { color: var(--text); }
