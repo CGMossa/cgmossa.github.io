@@ -222,7 +222,10 @@ pre {
     margin-bottom: 0.8rem;
     color: $color-text;
   }
-  p { color: $color-text; }
+  p {
+    color: $color-text;
+    margin-bottom: 1rem;
+  }
 }
 
 // ── Post List ─────────────────────────────────────────
