@@ -1,0 +1,9 @@
+[build]
+  publish = "public"
+  command = "echo 'Proxy-only site, no build needed'"
+
+[[redirects]]
+  from = "/*"
+  to = "https://cgmossa.github.io/:splat"
+  status = 200
+  force = true
