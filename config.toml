@@ -1,6 +1,6 @@
-base_url = "https://ministats.dev"
+base_url = "https://cgmossa.github.io"
 title = "Mossa Merhi Reimert"
-description = "Personal website of Mossa Merhi Reimert — researcher, developer, and open-source maintainer"
+description = "Personal website of Mossa Merhi Reimert, building research software, modelling tools, and open-source R/Rust infrastructure."
 default_language = "en"
 compile_sass = true
 minify_html = true
@@ -21,3 +21,5 @@ internal_level = "warn"
 
 [extra]
 author = "Mossa Merhi Reimert"
+location = "Copenhagen, Denmark"
+social_image = "social-card.svg"

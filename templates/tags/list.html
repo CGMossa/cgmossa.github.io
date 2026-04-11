@@ -4,7 +4,10 @@
 
 {% block content %}
 <article class="section-page">
-  <h1>Tags</h1>
+  <header class="page-intro">
+    <h1>Tags</h1>
+    <p class="page-lede">Browse posts by topic.</p>
+  </header>
   <div class="tag-cloud">
     {% for term in terms %}
     <a href="{{ term.permalink }}" class="tag">{{ term.name }} ({{ term.pages | length }})</a>

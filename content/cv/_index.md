@@ -1,5 +1,6 @@
 +++
 title = "CV"
+description = "Senior scientific software engineer working across R, Rust, research software, and applied modelling."
 template = "section.html"
 +++
 
@@ -16,11 +17,24 @@ contributor in the Rust ecosystem.
 </div>
 
 <div class="cv-section">
+<h2>Highlights</h2>
+<ul>
+<li>Build tooling and infrastructure for R and Rust projects that need to be fast, understandable, and shippable</li>
+<li>Translate between research questions, statistical models, and maintainable software systems</li>
+<li>Teach and communicate across mixed audiences of researchers, developers, and students</li>
+</ul>
+</div>
+
+<div class="cv-section">
 <h2>Experience</h2>
 
 <div class="cv-entry">
 <h3>Senior Scientific Software Engineer</h3>
 <div class="cv-meta"><a href="https://a2-ai.com">A2-Ai</a> &middot; 2025 &ndash; Present</div>
+<ul>
+<li>Build scientific software and technical workflows in domains where modelling, data, and product constraints meet</li>
+<li>Work across implementation, design, and collaboration boundaries to turn prototype code into maintainable systems</li>
+</ul>
 </div>
 
 <div class="cv-entry">
@@ -133,6 +147,9 @@ contributor in the Rust ecosystem.
 <span class="skill-tag">C#</span>
 <span class="skill-tag">C / C++</span>
 <span class="skill-tag">Bash</span>
+<span class="skill-tag">Statistical modelling</span>
+<span class="skill-tag">Scientific computing</span>
+<span class="skill-tag">Technical teaching</span>
 </div>
 </div>
 

@@ -5,28 +5,48 @@
 
 {% block content %}
 <article class="section-page">
-  <h1>{{ section.title }}</h1>
-  {{ section.content | safe }}
+  <header class="page-intro">
+    <h1>{{ section.title }}</h1>
+    {% if section.description %}
+    <p class="page-lede">{{ section.description }}</p>
+    {% endif %}
+  </header>
+
+  {% if section.content %}
+  <div class="page-body section-body">
+    {{ section.content | safe }}
+  </div>
+  {% endif %}
 
   {% if paginator is defined %}
   <ul class="post-list">
     {% for page in paginator.pages %}
     <li>
-      <a href="{{ page.permalink }}">{{ page.title }}</a>
-      <span class="post-list-meta">
-        {% if page.date %}
-        <time>{{ page.date | date(format="%b %d, %Y") }}</time>
-        {% endif %}
-        {% if page.reading_time %}
-        <span class="reading-time">{{ page.reading_time }} min</span>
-        {% endif %}
-      </span>
+      <div class="post-list-head">
+        <a href="{{ page.permalink }}">{{ page.title }}</a>
+        <span class="post-list-meta">
+          {% if page.date %}
+          <time>{{ page.date | date(format="%b %d, %Y") }}</time>
+          {% endif %}
+          {% if page.reading_time %}
+          <span class="reading-time">{{ page.reading_time }} min</span>
+          {% endif %}
+        </span>
+      </div>
       {% if page.description %}
-      <span class="post-desc">{{ page.description }}</span>
+      <p class="post-desc">{{ page.description }}</p>
+      {% endif %}
+      {% if page.taxonomies.tags is defined %}
+      <div class="mini-tags">
+        {% for tag in page.taxonomies.tags | slice(end=3) %}
+        <a href="{{ get_taxonomy_url(kind="tags", name=tag) }}" class="tag">{{ tag }}</a>
+        {% endfor %}
+      </div>
       {% endif %}
     </li>
     {% endfor %}
   </ul>
+
   {% if paginator.number_pagers > 1 %}
   <nav class="pagination">
     {% if paginator.previous %}
@@ -43,17 +63,26 @@
   <ul class="post-list">
     {% for page in section.pages %}
     <li>
-      <a href="{{ page.permalink }}">{{ page.title }}</a>
-      <span class="post-list-meta">
-        {% if page.date %}
-        <time>{{ page.date | date(format="%b %d, %Y") }}</time>
-        {% endif %}
-        {% if page.reading_time %}
-        <span class="reading-time">{{ page.reading_time }} min</span>
-        {% endif %}
-      </span>
+      <div class="post-list-head">
+        <a href="{{ page.permalink }}">{{ page.title }}</a>
+        <span class="post-list-meta">
+          {% if page.date %}
+          <time>{{ page.date | date(format="%b %d, %Y") }}</time>
+          {% endif %}
+          {% if page.reading_time %}
+          <span class="reading-time">{{ page.reading_time }} min</span>
+          {% endif %}
+        </span>
+      </div>
       {% if page.description %}
-      <span class="post-desc">{{ page.description }}</span>
+      <p class="post-desc">{{ page.description }}</p>
+      {% endif %}
+      {% if page.taxonomies.tags is defined %}
+      <div class="mini-tags">
+        {% for tag in page.taxonomies.tags | slice(end=3) %}
+        <a href="{{ get_taxonomy_url(kind="tags", name=tag) }}" class="tag">{{ tag }}</a>
+        {% endfor %}
+      </div>
       {% endif %}
     </li>
     {% endfor %}
