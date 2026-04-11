@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page.title }} | {{ config.title }}{% endblock %}
+{% block og_title %}{{ page.title }} | {{ config.title }}{% endblock %}
+
+{% block content %}
+<article class="page">
+  <header class="page-header">
+    <h1>{{ page.title }}</h1>
+    {% if page.date %}
+    <time>{{ page.date | date(format="%B %d, %Y") }}</time>
+    {% endif %}
+    <div class="post-meta">
+      {% if page.reading_time %}
+      <span class="reading-time">{{ page.reading_time }} min read</span>
+      {% endif %}
+    </div>
+    {% if page.taxonomies.tags is defined %}
+    <div class="post-tags">
+      {% for tag in page.taxonomies.tags %}
+      <a href="{{ get_taxonomy_url(kind="tags", name=tag) }}" class="tag">{{ tag }}</a>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </header>
+  <div class="page-body">
+    {{ page.content | safe }}
+  </div>
+  <nav class="post-nav">
+    {% if page.lower %}
+    <a class="post-nav-prev" href="{{ page.lower.permalink }}">&larr; {{ page.lower.title }}</a>
+    {% endif %}
+    {% if page.higher %}
+    <a class="post-nav-next" href="{{ page.higher.permalink }}">{{ page.higher.title }} &rarr;</a>
+    {% endif %}
+  </nav>
+</article>
+{% endblock %}

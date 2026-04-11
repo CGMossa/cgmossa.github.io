@@ -79,4 +79,22 @@
 
   <a href="{{ get_url(path='@/projects/_index.md') }}" class="read-more">More projects &rarr;</a>
 </section>
+
+<section class="home-section">
+  <h2>Blog</h2>
+  {% set blog = get_section(path="blog/_index.md") %}
+  {% if blog.pages | length > 0 %}
+  <ul class="post-list">
+    {% for page in blog.pages | slice(end=5) %}
+    <li>
+      <a href="{{ page.permalink }}">{{ page.title }}</a>
+      <time>{{ page.date | date(format="%b %d, %Y") }}</time>
+    </li>
+    {% endfor %}
+  </ul>
+  <a href="{{ get_url(path='@/blog/_index.md') }}" class="read-more">All posts &rarr;</a>
+  {% else %}
+  <p class="muted">No posts yet.</p>
+  {% endif %}
+</section>
 {% endblock %}

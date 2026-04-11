@@ -4,6 +4,10 @@ description = "Personal website of Mossa Merhi Reimert — researcher, developer
 default_language = "en"
 compile_sass = true
 minify_html = true
+generate_feeds = true
+feed_filenames = ["atom.xml"]
+feed_limit = 20
+taxonomies = [{ name = "tags", feed = true }]
 
 [markdown]
 highlighting = { theme = "dracula", enabled = true }
