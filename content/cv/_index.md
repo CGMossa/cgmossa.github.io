@@ -188,16 +188,50 @@ contributor in the Rust ecosystem.
 <li><strong>extendr: Frictionless bindings for R and Rust</strong> (2024) &mdash; <a href="https://doi.org/10.21105/joss.06394">doi:10.21105/joss.06394</a></li>
 <li><strong>Social network analysis reveals the failure of between-farm movement restrictions to reduce Salmonella transmission</strong> (2024) &mdash; <a href="https://doi.org/10.3168/jds.2023-24554">doi:10.3168/jds.2023-24554</a></li>
 <li><strong>Using registry data to identify individual dairy cows with abnormal patterns in routinely recorded somatic cell counts</strong> (2024) &mdash; <a href="https://doi.org/10.1016/j.jtbi.2023.111718">doi:10.1016/j.jtbi.2023.111718</a></li>
+<li><strong>Spatial discretisation and anonymisation in R using CORINE land cover data and the hexscape package</strong> &mdash; Matt Denwood, Mossa Merhi Reimert, Carlijn Bogaardt, Maya Katrin Gussmann, Carsten Thure Kirkeby and Jess Enright. <em>Submitted to Preventive Veterinary Medicine.</em></li>
+<li><strong>Habitat-centric clustering of wildlife populations: methods and implications for the population dynamics of wild boar</strong> &mdash; Mossa Merhi Reimert, Maya Katrin Gussmann, Anette Ella Boklund, Philip Rasmussen and Matt Denwood. <em>In preparation for Ecological Modelling.</em></li>
 </ul>
 </div>
 
 <div class="cv-section">
 <h2>Conferences</h2>
-<ul>
-<li>Senior oral presentation at GeoVet2023, the International Conference of Spatial Epidemiology, Geostatistics, and GIS applied to animal health, public health, and food safety</li>
-<li>Talk at ISVEE16, the 16th International Symposium of Veterinary Epidemiology and Economics (2022)</li>
-<li>Talk at ModAH2, Modelling in Animal Health (2021)</li>
-</ul>
+
+<div class="cv-entry">
+<h3>Scientific Computing in Rust 2024</h3>
+<div class="cv-meta"><a href="https://scientificcomputing.rs">scientificcomputing.rs</a> &middot; 18 July 2024 &middot; Online</div>
+<p>Talk: &ldquo;extendr: Frictionless bindings for R and Rust.&rdquo; Live and online presentation (10 min). Hosted by organisers from University College London (UK) and University of Colorado Boulder (USA).</p>
+</div>
+
+<div class="cv-entry">
+<h3>GeoVet 2023</h3>
+<div class="cv-meta">Silvi Marina, Teramo, Italy &middot; 20 September 2023</div>
+<p>Senior oral presentation (20 min + 5 min discussion): &ldquo;Choice of Landscape Discretisation Affects the Rate of Spread in Wildlife Disease Models.&rdquo; International Conference of Spatial Epidemiology, Geostatistics and GIS applied to animal health, public health, and food safety.</p>
+</div>
+
+<div class="cv-entry">
+<h3>ISVEE 16</h3>
+<div class="cv-meta">Halifax, Canada &middot; 7&ndash;12 August 2022</div>
+<p>Oral presentation: &ldquo;An ecological process-based model of wild boar.&rdquo; 16th International Symposium of Veterinary Epidemiology and Economics.</p>
+</div>
+
+<div class="cv-entry">
+<h3>ModAH 2021</h3>
+<div class="cv-meta">INRAE, Nantes, France &middot; 2 July 2021 &middot; Online</div>
+<p>Talk: &ldquo;Influence of ecological processes within disease models.&rdquo; Live presentation (webinar). Modelling in Animal Health conference.</p>
+</div>
+
+<div class="cv-entry">
+<h3>Det 41. symposium i anvendt statistik</h3>
+<div class="cv-meta">University of Copenhagen &middot; 28&ndash;30 January 2019 &middot; <a href="https://www.statistiksymposium.dk/">statistiksymposium.dk</a></div>
+<p>Attended.</p>
+</div>
+
+<div class="cv-entry">
+<h3>SAFJR 2019</h3>
+<div class="cv-meta">2019</div>
+<p>Attended.</p>
+</div>
+
 </div>
 
 <div class="cv-section">
@@ -218,7 +252,7 @@ contributor in the Rust ecosystem.
 <div class="cv-section">
 <h2>Personal</h2>
 <ul>
-<li>Married to Clara Merhi Reimert and father of two</li>
+<li>Father of two</li>
 <li>Avid collector of custom mechanical keyboards</li>
 </ul>
 </div>
@@ -226,12 +260,76 @@ contributor in the Rust ecosystem.
 <div class="cv-section">
 <h2>Links</h2>
 <ul>
-<li><a href="mailto:cgmossa@gmail.com">cgmossa@gmail.com</a></li>
+
 <li><a href="https://orcid.org/0009-0007-9297-1523">ORCID: 0009-0007-9297-1523</a></li>
 <li><a href="https://github.com/cgmossa">GitHub</a></li>
 <li><a href="https://www.linkedin.com/in/cgmossa">LinkedIn</a></li>
 <li><a href="https://www.datacamp.com/portfolio/cgmossa">DataCamp</a></li>
 <li><a href="https://exercism.org/profiles/CGMossa">Exercism</a></li>
-<li><a href="https://researchprofiles.ku.dk/en/persons/a075eaa4-5798-4840-94ca-a927fa224f5c/">University of Copenhagen research profile</a></li>
+
 </ul>
+</div>
+
+<div class="cv-section">
+<h2>Coursework</h2>
+
+<div class="cv-entry">
+<h3>BSc in Science &amp; IT (2010&ndash;2013)</h3>
+<ul>
+<li>Introduction to Mathematics for Science</li>
+<li>Modelling in Science</li>
+<li>Linear Algebra in Science</li>
+<li>Programming and Problem Solving</li>
+<li>Analysis 0</li>
+<li>Algorithms and Data Structures</li>
+<li>Databases and Data Mining</li>
+<li>Statistical Models in Science</li>
+<li>Introduction to Numerical Analysis</li>
+<li>Numerical Solution of Differential Equations: Finite Difference Methods</li>
+<li>Project Course: Science and IT</li>
+<li>Philosophy of Computer Science</li>
+<li>Electrodynamics and Waves</li>
+<li>Quantum Mechanics 1</li>
+<li>Introduction to Mechanics and Relativity Theory</li>
+<li>Classical Mechanics</li>
+<li>Thermodynamics and Project</li>
+<li>Electromagnetism</li>
+<li>Analytical Mechanics and Chaos</li>
+<li>Analysis 1</li>
+<li>Mathematics for Physicists</li>
+</ul>
+</div>
+
+<div class="cv-entry">
+<h3>BSc in Mathematics (2013&ndash;2015)</h3>
+<ul>
+<li>Discrete Mathematics</li>
+<li>Probability Theory and Statistics</li>
+<li>Algebra 1</li>
+<li>Geometry 1</li>
+<li>Analysis 2</li>
+<li>Measures and Integrals</li>
+<li>Statistics 1</li>
+<li>Statistics 2</li>
+<li>Stochastic Processes</li>
+<li>Graphical Models</li>
+</ul>
+</div>
+
+<div class="cv-entry">
+<h3>MSc in Statistics (2016&ndash;2018)</h3>
+<ul>
+<li>Discrete Models</li>
+<li>Regression</li>
+<li>Project in Statistics</li>
+<li>Advanced Probability Theory 1</li>
+<li>Advanced Probability Theory 2</li>
+<li>Bayesian Statistics</li>
+<li>Causality</li>
+<li>Computational Statistics</li>
+<li>Monte Carlo Methods in Insurance and Finance</li>
+<li>Sparse Learning</li>
+</ul>
+</div>
+
 </div>
