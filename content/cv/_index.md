@@ -202,6 +202,12 @@ and presented at international conferences in veterinary epidemiology, spatial m
 <h2>Conferences</h2>
 
 <div class="cv-entry">
+<h3>Cascadia R Conf 2025</h3>
+<div class="cv-meta"><a href="https://cascadiarconf.org/2025/">cascadiarconf.org</a> &middot; Portland, OR &middot; 20 June 2025</div>
+<p>Co-authored <a href="https://josiahparry.github.io/2025-cascadia-rust-for-r-devs/">workshop material</a> with Josiah Parry for two workshops: &ldquo;<a href="https://cascadiarconf.org/2025/workshop/rust1/">Intro to Rust for R Developers</a>&rdquo; and &ldquo;<a href="https://cascadiarconf.org/2025/workshop/rust2/">Building Rust based R Packages</a>&rdquo; using extendr.</p>
+</div>
+
+<div class="cv-entry">
 <h3>Scientific Computing in Rust 2024</h3>
 <div class="cv-meta"><a href="https://scientificcomputing.rs">scientificcomputing.rs</a> &middot; 18 July 2024 &middot; Online</div>
 <p>Talk: &ldquo;extendr: Frictionless bindings for R and Rust.&rdquo; Live and online presentation (10 min). Hosted by organisers from University College London (UK) and University of Colorado Boulder (USA).</p>
