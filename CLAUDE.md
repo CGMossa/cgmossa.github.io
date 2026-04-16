@@ -50,6 +50,10 @@ Post body in Markdown.
 
 See `BLOG_GUIDE.md` for more detail.
 
+## Writing style
+
+- Avoid em-dashes (—) in content and documentation. Use commas, parentheses, or rewrite the sentence instead.
+
 ## Key conventions
 
 - Styling uses SCSS variables defined at the top of `sass/style.scss` (colours, fonts, max-width)
