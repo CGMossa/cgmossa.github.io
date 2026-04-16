@@ -10,5 +10,5 @@
 {%- if meta -%}{{ meta }}{%- endif -%}
 </div>
 {%- endif %}
-{%- if body %}{{ body }}{% endif -%}
+{%- if body %}{{ body | markdown | safe }}{% endif -%}
 </div>

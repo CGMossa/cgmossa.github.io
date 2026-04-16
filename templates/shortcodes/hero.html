@@ -1,7 +1,7 @@
 <section class="hero">
   <h1>{{ config.title }}</h1>
   <p class="hero-subtitle">{{ subtitle }}</p>
-  <div class="hero-summary">{{ body }}</div>
+  <div class="hero-summary">{{ body | markdown | safe }}</div>
   <div class="hero-links">
     {%- if github is defined -%}<a href="{{ github }}" class="btn" target="_blank" rel="noopener">GitHub</a>{%- endif -%}
     {%- if orcid is defined -%}<a href="{{ orcid }}" class="btn btn-outline" target="_blank" rel="noopener">ORCID</a>{%- endif -%}

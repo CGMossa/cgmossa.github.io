@@ -1,7 +1,7 @@
 {%- set tags = tags | default(value="") -%}
 <div class="project-card">
 <h3><a href="{{ url }}" target="_blank" rel="noopener">{{ title }}</a></h3>
-{{ body }}
+{{ body | markdown | safe }}
 {%- if tags %}
 <div class="project-tags">
 {%- for tag in tags | split(pat=",") %}
