@@ -168,6 +168,32 @@ Attended.
 
 ## Coursework
 
+{% cv_entry(title="MSc in Statistics (2016–2018)") %}
+- Discrete Models
+- Regression
+- Project in Statistics
+- Advanced Probability Theory 1
+- Advanced Probability Theory 2
+- Bayesian Statistics
+- Causality
+- Computational Statistics
+- Monte Carlo Methods in Insurance and Finance
+- Sparse Learning
+{% end %}
+
+{% cv_entry(title="BSc in Mathematics (2013–2015)") %}
+- Discrete Mathematics
+- Probability Theory and Statistics
+- Algebra 1
+- Geometry 1
+- Analysis 2
+- Measures and Integrals
+- Statistics 1
+- Statistics 2
+- Stochastic Processes
+- Graphical Models
+{% end %}
+
 {% cv_entry(title="BSc in Science & IT (2010–2013)") %}
 - Introduction to Mathematics for Science
 - Modelling in Science
@@ -190,30 +216,4 @@ Attended.
 - Analytical Mechanics and Chaos
 - Analysis 1
 - Mathematics for Physicists
-{% end %}
-
-{% cv_entry(title="BSc in Mathematics (2013–2015)") %}
-- Discrete Mathematics
-- Probability Theory and Statistics
-- Algebra 1
-- Geometry 1
-- Analysis 2
-- Measures and Integrals
-- Statistics 1
-- Statistics 2
-- Stochastic Processes
-- Graphical Models
-{% end %}
-
-{% cv_entry(title="MSc in Statistics (2016–2018)") %}
-- Discrete Models
-- Regression
-- Project in Statistics
-- Advanced Probability Theory 1
-- Advanced Probability Theory 2
-- Bayesian Statistics
-- Causality
-- Computational Statistics
-- Monte Carlo Methods in Insurance and Finance
-- Sparse Learning
 {% end %}
