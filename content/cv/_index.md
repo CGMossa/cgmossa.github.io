@@ -8,11 +8,14 @@ template = "section.html"
 <h2>Summary</h2>
 <p>
 Senior Scientific Software Engineer at <a href="https://a2-ai.com">A2-Ai</a>.
-PhD in Veterinary Epidemiology from the University of Copenhagen.
-Over a decade of experience spanning data science, academic research, teaching,
-and software development. Core maintainer of
+PhD in Veterinary Epidemiology and MSc in Statistics from the University of Copenhagen,
+with additional undergraduate degrees in Mathematics (statistics major) and Science &amp; IT (computational physics).
+Over a decade of experience spanning statistical modelling, scientific computing, academic research,
+teaching, and software development. Core maintainer of
 <a href="https://github.com/extendr/extendr">extendr</a> and active open-source
-contributor in the Rust ecosystem.
+contributor in the Rust and R ecosystems. Published in journals including
+the Journal of Theoretical Biology, JOSS, and Preventive Veterinary Medicine,
+and presented at international conferences in veterinary epidemiology, spatial modelling, and scientific computing.
 </p>
 </div>
 
@@ -20,8 +23,10 @@ contributor in the Rust ecosystem.
 <h2>Highlights</h2>
 <ul>
 <li>Build tooling and infrastructure for R and Rust projects that need to be fast, understandable, and shippable</li>
+<li>Deep foundation in mathematics, probability theory, and statistics &mdash; from measure theory and stochastic processes to Bayesian inference and causal reasoning</li>
 <li>Translate between research questions, statistical models, and maintainable software systems</li>
-<li>Teach and communicate across mixed audiences of researchers, developers, and students</li>
+<li>Model disease spread across wildlife and livestock populations, with work on spatial discretisation, surveillance, and control strategies</li>
+<li>Teach and communicate across mixed audiences of researchers, developers, and students &mdash; from university courses to international conference talks</li>
 </ul>
 </div>
 
