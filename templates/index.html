@@ -1,83 +1,9 @@
 {% extends "base.html" %}
 
 {% block content %}
-<section class="hero">
-  <h1>Mossa Merhi Reimert</h1>
-  <p class="hero-subtitle">Software Engineer &middot; Researcher &middot; Open-Source Maintainer</p>
-  <p class="hero-summary">
-    R/Rust programmer and statistical &amp; mathematical modeller.
-    Senior Scientific Software Engineer at <a href="https://a2-ai.com"><strong>A2-Ai</strong></a>.
-    Collaborator first &mdash; I like solving specific problems in cross-disciplinary contexts.
-  </p>
-  <div class="hero-links">
-    <a href="https://github.com/cgmossa" class="btn" target="_blank" rel="noopener">GitHub</a>
-    <a href="https://orcid.org/0009-0007-9297-1523" class="btn btn-outline" target="_blank" rel="noopener">ORCID</a>
-    <a href="https://www.linkedin.com/in/cgmossa" class="btn btn-outline" target="_blank" rel="noopener">LinkedIn</a>
-  </div>
-</section>
-
-<section class="home-section">
-  <h2>About</h2>
-  <p>
-    I am Mossa Merhi Reimert, PhD. I am a developer, teacher, and researcher, and a core maintainer of
-    <a href="https://github.com/extendr/extendr">extendr</a>, which bridges R and Rust.
-    My research background is in epidemiological modelling, simulator-based inference,
-    and spatial disease spread.
-  </p>
-  <p>
-    I work on tooling and infrastructure that need to be both technically sound
-    and useful to other people. That includes open-source maintainership, research
-    software, and the work of turning prototype code into something another person
-    can run, inspect, and extend.
-  </p>
-</section>
-
-<section class="home-section">
-  <h2>Current work</h2>
-  <p>
-    At <a href="https://a2-ai.com">A2-Ai</a> I build scientific software in settings
-    where modelling, data, and product constraints meet. Outside of work, I spend
-    a lot of time on R and Rust interoperability, package infrastructure, and the
-    broader craft of making technical projects easier to maintain.
-  </p>
-  <p>
-    Active in the <a href="https://cph.rs">cph.rs</a> community, Copenhagen's monthly
-    Rust meetup. Father of two.
-  </p>
-</section>
-
-<section class="home-section">
-  <h2>Selected projects</h2>
-
-  <div class="project-card">
-    <h3><a href="https://github.com/extendr/extendr" target="_blank" rel="noopener">extendr</a></h3>
-    <p>
-      Frictionless bindings between R and Rust. I am a core maintainer of the
-      project and work on the broader tooling around the R-Rust bridge.
-    </p>
-    <div class="project-tags"><span>Rust</span><span>R</span><span>FFI</span></div>
-  </div>
-
-  <div class="project-card">
-    <h3><a href="https://github.com/cgmossa/miniextendr" target="_blank" rel="noopener">miniextendr</a></h3>
-    <p>
-      A Rust-R interoperability framework for building R packages with Rust backends,
-      including ExternalPtr wrappers, ALTREP support, and CRAN-ready packaging.
-    </p>
-    <div class="project-tags"><span>Rust</span><span>R</span><span>CRAN</span></div>
-  </div>
-
-  <div class="project-card">
-    <h3><a href="https://github.com/cgmossa/miniR" target="_blank" rel="noopener">miniR</a></h3>
-    <p>
-      An R interpreter written in Rust, aimed at real package code rather than
-      toy examples, with growing compatibility and native extension loading.
-    </p>
-    <div class="project-tags"><span>Rust</span><span>R</span><span>Interpreter</span></div>
-  </div>
-
-  <a href="{{ get_url(path='@/projects/_index.md') }}" class="read-more">More projects &rarr;</a>
-</section>
+<div class="home-content">
+{{ section.content | safe }}
+</div>
 
 <section class="home-section">
   <h2>Blog</h2>

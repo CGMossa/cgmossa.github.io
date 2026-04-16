@@ -1,0 +1,14 @@
+{%- set org = org | default(value="") -%}
+{%- set org_url = org_url | default(value="") -%}
+{%- set meta = meta | default(value="") -%}
+<div class="cv-entry">
+<h3>{{ title }}</h3>
+{%- if org or meta %}
+<div class="cv-meta">
+{%- if org -%}{%- if org_url -%}<a href="{{ org_url }}">{{ org }}</a>{%- else -%}{{ org }}{%- endif -%}{%- endif -%}
+{%- if org and meta %} · {% endif -%}
+{%- if meta -%}{{ meta }}{%- endif -%}
+</div>
+{%- endif %}
+{%- if body %}{{ body }}{% endif -%}
+</div>

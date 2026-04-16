@@ -2,3 +2,48 @@
 title = "Home"
 description = "Mossa Merhi Reimert builds research software, modelling tools, and open-source R/Rust infrastructure."
 +++
+
+{% hero(subtitle="Software Engineer · Researcher · Open-Source Maintainer", github="https://github.com/cgmossa", orcid="https://orcid.org/0009-0007-9297-1523", linkedin="https://www.linkedin.com/in/cgmossa") %}
+R/Rust programmer and statistical & mathematical modeller. Senior Scientific Software Engineer at [**A2-Ai**](https://a2-ai.com). Collaborator first — I like solving specific problems in cross-disciplinary contexts.
+{% end %}
+
+## About
+
+I am Mossa Merhi Reimert, PhD. I am a developer, teacher, and researcher, and a core maintainer of
+[extendr](https://github.com/extendr/extendr), which bridges R and Rust.
+My research background is in epidemiological modelling, simulator-based inference,
+and spatial disease spread.
+
+I work on tooling and infrastructure that need to be both technically sound
+and useful to other people. That includes open-source maintainership, research
+software, and the work of turning prototype code into something another person
+can run, inspect, and extend.
+
+## Current work
+
+At [A2-Ai](https://a2-ai.com) I build scientific software in settings
+where modelling, data, and product constraints meet. Outside of work, I spend
+a lot of time on R and Rust interoperability, package infrastructure, and the
+broader craft of making technical projects easier to maintain.
+
+Active in the [cph.rs](https://cph.rs) community, Copenhagen's monthly
+Rust meetup. Father of two.
+
+## Selected projects
+
+{% project_card(title="extendr", url="https://github.com/extendr/extendr", tags="Rust, R, FFI") %}
+Frictionless bindings between R and Rust. I am a core maintainer of the
+project and work on the broader tooling around the R-Rust bridge.
+{% end %}
+
+{% project_card(title="miniextendr", url="https://github.com/cgmossa/miniextendr", tags="Rust, R, CRAN") %}
+A Rust-R interoperability framework for building R packages with Rust backends,
+including ExternalPtr wrappers, ALTREP support, and CRAN-ready packaging.
+{% end %}
+
+{% project_card(title="miniR", url="https://github.com/cgmossa/miniR", tags="Rust, R, Interpreter") %}
+An R interpreter written in Rust, aimed at real package code rather than
+toy examples, with growing compatibility and native extension loading.
+{% end %}
+
+[More projects →](/projects/)

@@ -7,55 +7,35 @@ template = "section.html"
 A selection of projects I maintain or contribute to. Most of them live where
 language tooling, scientific computing, and real-world constraints overlap.
 
-<div class="project-card">
-<h3><a href="https://github.com/extendr/extendr" target="_blank" rel="noopener">extendr</a></h3>
-<p>
+{% project_card(title="extendr", url="https://github.com/extendr/extendr", tags="Rust, R, FFI") %}
 Frictionless bindings between R and Rust. Write high-performance R extensions in safe Rust
 with ergonomic macros and automatic type conversions.
 I am a core maintainer of the extendr organisation.
-Published in the <a href="https://doi.org/10.21105/joss.06394">Journal of Open Source Software</a>.
-</p>
-<div class="project-tags"><span>Rust</span><span>R</span><span>FFI</span></div>
-</div>
+Published in the [Journal of Open Source Software](https://doi.org/10.21105/joss.06394).
+{% end %}
 
-<div class="project-card">
-<h3><a href="https://github.com/extendr" target="_blank" rel="noopener">extendr (organisation)</a></h3>
-<p>
-The broader extendr ecosystem, including <code>rextendr</code> (the R companion package),
+{% project_card(title="extendr (organisation)", url="https://github.com/extendr", tags="Rust, R, Open Source") %}
+The broader extendr ecosystem, including `rextendr` (the R companion package),
 documentation, CI infrastructure, and community resources for the R-Rust bridge.
-</p>
-<div class="project-tags"><span>Rust</span><span>R</span><span>Open Source</span></div>
-</div>
+{% end %}
 
-<div class="project-card">
-<h3><a href="https://github.com/cgmossa/miniextendr" target="_blank" rel="noopener">miniextendr</a></h3>
-<p>
+{% project_card(title="miniextendr", url="https://github.com/cgmossa/miniextendr", tags="Rust, R, FFI, CRAN") %}
 A Rust-R interoperability framework for building R packages with Rust backends.
 Features ExternalPtr wrappers, ALTREP support, S3/S4/R6 class systems, worker-thread
 execution, and CRAN-ready vendored packaging. Includes a
-<a href="https://cgmossa.github.io/miniextendr/">documentation site</a> with 70+ reference pages.
-</p>
-<div class="project-tags"><span>Rust</span><span>R</span><span>FFI</span><span>CRAN</span></div>
-</div>
+[documentation site](https://cgmossa.github.io/miniextendr/) with 70+ reference pages.
+{% end %}
 
-<div class="project-card">
-<h3><a href="https://github.com/cgmossa/miniR" target="_blank" rel="noopener">miniR</a></h3>
-<p>
+{% project_card(title="miniR", url="https://github.com/cgmossa/miniR", tags="Rust, R, Interpreter") %}
 An R interpreter written in Rust. Reentrant design with per-interpreter state,
 800+ builtin entry points, native C extension loading, and a growing CRAN compatibility
 corpus. Targets real package code, not toy examples.
-<a href="https://cgmossa.github.io/miniR/">Documentation site</a>.
-</p>
-<div class="project-tags"><span>Rust</span><span>R</span><span>Interpreter</span></div>
-</div>
+[Documentation site](https://cgmossa.github.io/miniR/).
+{% end %}
 
-<div class="project-card">
-<h3><a href="https://orcid.org/0009-0007-9297-1523" target="_blank" rel="noopener">Applied epidemiological modelling</a></h3>
-<p>
+{% project_card(title="Applied epidemiological modelling", url="https://orcid.org/0009-0007-9297-1523", tags="Modelling, Inference, Research Software") %}
 Research software and publications around simulator-based inference, spatial
 disease spread, and intervention modelling in livestock and wildlife contexts.
 This work combines statistical reasoning, domain collaboration, and code that
 needs to be inspectable and reproducible.
-</p>
-<div class="project-tags"><span>Modelling</span><span>Inference</span><span>Research Software</span></div>
-</div>
+{% end %}

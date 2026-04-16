@@ -1,0 +1,5 @@
+<div class="skills-grid">
+{%- for skill in list | split(pat=",") %}
+<span class="skill-tag">{{ skill | trim }}</span>
+{%- endfor %}
+</div>

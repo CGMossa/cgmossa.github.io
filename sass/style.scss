@@ -228,6 +228,28 @@ pre {
   }
 }
 
+.home-content {
+  > h2 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin-top: 2.5rem;
+    margin-bottom: 0.8rem;
+    color: $color-text;
+    &:first-of-type { margin-top: 0; }
+  }
+  > p {
+    color: $color-text;
+    margin-bottom: 1rem;
+  }
+  .read-more {
+    display: inline-block;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+}
+
 // ── Post List ─────────────────────────────────────────
 .post-list {
   list-style: none;
@@ -275,6 +297,23 @@ pre {
     font-weight: 700;
     letter-spacing: -0.02em;
     margin-bottom: 1.5rem;
+  }
+}
+
+.section-page {
+  h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: $color-primary;
+    padding-bottom: 0.4rem;
+    border-bottom: 2px solid $color-primary;
+    margin-bottom: 1.2rem;
+    margin-top: 2.5rem;
+  }
+  h1 + h2 { margin-top: 0; }
+  ul a {
+    text-decoration: underline;
+    text-underline-offset: 2px;
   }
 }
 
@@ -642,9 +681,15 @@ pre {
   .cv-entry { border-left-color: var(--accent); }
   .cv-entry .cv-meta { color: var(--text-muted); }
 
-  .cv-section h2 {
+  .cv-section h2,
+  .section-page h2 {
     color: var(--primary);
     border-bottom-color: var(--primary);
+  }
+
+  .home-content {
+    > h2 { color: var(--text); }
+    > p { color: var(--text); }
   }
 
   .skill-tag {
