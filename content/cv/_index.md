@@ -156,7 +156,7 @@ Attended.
 
 ## Grants
 
-- Grant proposal accepted by the R Consortium Infrastructure Steering Committee for **"extendr: Modern OOP tools"** (2025), covering the `vctrs/S3 Support` and `S7 Support` milestones
+- Accepted by the R Consortium Infrastructure Steering Committee (ISC) for **"extendr: Modern OOP tools"** (2025), covering the `vctrs/S3 Support` and `S7 Support` milestones
 
 ## Awards
 
