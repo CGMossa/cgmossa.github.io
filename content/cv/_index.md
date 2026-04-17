@@ -24,6 +24,10 @@ and presented at international conferences in veterinary epidemiology, spatial m
 - Model disease spread across wildlife and livestock populations, with work on spatial discretisation, surveillance, and control strategies
 - Teach and communicate across mixed audiences of researchers, developers, and students — from university courses to international conference talks
 
+## Skills
+
+{{ skills(list="R, Rust, Git & GitHub Actions, MATLAB, Python, PyTorch, C#, C / C++, Bash, Statistical modelling, Scientific computing, Technical teaching") }}
+
 ## Experience
 
 {% cv_entry(title="Senior Scientific Software Engineer", org="A2-Ai", org_url="https://a2-ai.com", meta="2025–Present") %}
@@ -94,10 +98,6 @@ Statistics as study major.
 {% cv_entry(title="BSc in Science and IT", org="University of Copenhagen", meta="2010–2013") %}
 Specialisation in computational physics.
 {% end %}
-
-## Skills
-
-{{ skills(list="R, Rust, Git & GitHub Actions, MATLAB, Python, PyTorch, C#, C / C++, Bash, Statistical modelling, Scientific computing, Technical teaching") }}
 
 ## Online Learning
 
