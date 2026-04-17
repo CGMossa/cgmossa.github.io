@@ -22,7 +22,8 @@ inference, and spatial disease spread.
 I build tooling and infrastructure that need to be technically rigorous,
 maintainable, and useful in practice. That includes open-source
 maintainership, research software, and the work of turning prototype code into
-systems other people can run, inspect, and extend.
+systems other people can run, inspect, and extend, often in international and
+cross-disciplinary settings.
 
 ## Current work
 

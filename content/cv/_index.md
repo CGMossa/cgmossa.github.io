@@ -29,6 +29,8 @@ modelling, and scientific computing.
   software
 - Develop disease-spread models across wildlife and livestock populations, with
   work on spatial discretisation, surveillance, and control strategies
+- Work effectively across institutions, disciplines, and international
+  collaborations
 - Teach and communicate effectively across researchers, developers, and
   students, from university courses to international conference talks
 
