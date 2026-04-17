@@ -7,6 +7,10 @@ template = "section.html"
 A selection of projects I maintain or contribute to. Most of them live where
 language tooling, scientific computing, and real-world constraints overlap.
 
+I am interested in collaborating within scientific computing in Rust,
+especially on numerical solvers for differential equations, statistical
+methods, agent-based modelling, and individual-based modelling.
+
 {% project_card(title="extendr", url_key="extendr", tags="Rust, R, FFI") %}
 Frictionless bindings between R and Rust. Write high-performance R extensions in
 safe Rust
