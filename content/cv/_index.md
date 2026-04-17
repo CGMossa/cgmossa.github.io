@@ -20,16 +20,16 @@ modelling, and scientific computing.
 
 ## Highlights
 
-- Build tooling and infrastructure for R and Rust projects that need to be
-  fast, understandable, and shippable
-- Deep foundation in mathematics, probability theory, and statistics, from
-  measure theory and stochastic processes to Bayesian inference and causal
+- Build and maintain R and Rust tooling that needs to be fast, reliable, and
+  ready for real use
+- Bring a deep foundation in mathematics, probability theory, and statistics,
+  from measure theory and stochastic processes to Bayesian inference and causal
   reasoning
-- Translate between research questions, statistical models, and maintainable
-  software systems
-- Model disease spread across wildlife and livestock populations, with work on
-  spatial discretisation, surveillance, and control strategies
-- Teach and communicate across mixed audiences of researchers, developers, and
+- Turn research questions into statistical models and then into maintainable
+  software
+- Develop disease-spread models across wildlife and livestock populations, with
+  work on spatial discretisation, surveillance, and control strategies
+- Teach and communicate effectively across researchers, developers, and
   students, from university courses to international conference talks
 
 ## Skills

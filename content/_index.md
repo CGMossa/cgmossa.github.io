@@ -6,9 +6,9 @@ description = "Mossa Merhi Reimert builds research software, modelling tools, an
 {% hero(
 subtitle="Software Engineer · Researcher · Open-Source Maintainer"
 ) %}
-R/Rust programmer and statistical & mathematical modeller. Senior Scientific
-Software Engineer at [**A2-Ai**](https://a2-ai.com). Collaborator first — I like
-solving specific problems in cross-disciplinary contexts.
+R/Rust programmer and statistical modeller. Senior Scientific Software
+Engineer at [**A2-Ai**](https://a2-ai.com). I build robust technical systems for
+research, modelling, and open-source infrastructure.
 {% end %}
 
 ## About
@@ -16,20 +16,20 @@ solving specific problems in cross-disciplinary contexts.
 I am Mossa Merhi Reimert, PhD. I am a developer, teacher, and researcher, and
 a core maintainer of
 [extendr](https://github.com/extendr/extendr), which bridges R and Rust.
-My research background is in epidemiological modelling, simulator-based inference,
-and spatial disease spread.
+My research background is in epidemiological modelling, simulator-based
+inference, and spatial disease spread.
 
-I work on tooling and infrastructure that need to be both technically sound
-and useful to other people. That includes open-source maintainership, research
-software, and the work of turning prototype code into something another person
-can run, inspect, and extend.
+I build tooling and infrastructure that need to be technically rigorous,
+maintainable, and useful in practice. That includes open-source
+maintainership, research software, and the work of turning prototype code into
+systems other people can run, inspect, and extend.
 
 ## Current work
 
 At [A2-Ai](https://a2-ai.com) I build scientific software in settings
 where modelling, data, and product constraints meet. Outside of work, I spend
-a lot of time on R and Rust interoperability, package infrastructure, and the
-broader craft of making technical projects easier to maintain.
+substantial time on R and Rust interoperability, package infrastructure, and
+the broader craft of making technical projects easier to maintain.
 
 Active in the [cph.rs](https://cph.rs) community, Copenhagen's monthly
 Rust meetup. Father of two.

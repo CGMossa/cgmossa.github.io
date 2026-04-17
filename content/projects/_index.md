@@ -4,7 +4,7 @@ description = "Selected open-source and research-oriented projects across R, Rus
 template = "section.html"
 +++
 
-A selection of projects I maintain or contribute to. Most of them live where
+A selection of projects I maintain. They live where
 language tooling, scientific computing, and real-world constraints overlap.
 
 I am interested in collaborating within scientific computing in Rust,
