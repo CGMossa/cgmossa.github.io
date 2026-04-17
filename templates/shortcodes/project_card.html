@@ -1,6 +1,16 @@
 {%- set tags = tags | default(value="") -%}
+{%- set resolved_url = url | default(value="") -%}
+{%- if resolved_url == "" and url_key is defined -%}
+  {%- set resolved_url = config.extra.project_urls[url_key] | default(value="") -%}
+{%- endif -%}
 <div class="project-card">
-<h3><a href="{{ url }}" target="_blank" rel="noopener">{{ title }}</a></h3>
+<h3>
+  {%- if resolved_url -%}
+  <a href="{{ resolved_url }}" target="_blank" rel="noopener">{{ title }}</a>
+  {%- else -%}
+  {{ title }}
+  {%- endif -%}
+</h3>
 {{ body | markdown | safe }}
 {%- if tags %}
 <div class="project-tags">

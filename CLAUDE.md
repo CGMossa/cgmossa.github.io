@@ -61,6 +61,7 @@ See `BLOG_GUIDE.md` for more detail.
 - The nav highlights the active section via `current_path`
 - Config enables: smart punctuation, emoji rendering, lazy image loading, heading anchor links, tag taxonomy with feeds
 - Deployment is automatic on push to `main` via GitHub Actions
+- `public/` is generated build output and should never be edited or touched by the LLM
 
 ## External links
 

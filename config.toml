@@ -21,3 +21,22 @@ internal_level = "warn"
 
 [extra]
 author = "Mossa Merhi Reimert"
+
+[extra.social_links]
+github = "https://github.com/cgmossa"
+orcid = "https://orcid.org/0009-0007-9297-1523"
+linkedin = "https://www.linkedin.com/in/cgmossa"
+
+[extra.project_urls]
+extendr = "https://github.com/extendr/extendr"
+extendr_org = "https://github.com/extendr"
+miniextendr = "https://github.com/cgmossa/miniextendr"
+minir = "https://github.com/cgmossa/miniR"
+orcid = "https://orcid.org/0009-0007-9297-1523"
+
+[extra.org_urls]
+a2ai = "https://a2-ai.com"
+dis = "https://dis.dk/"
+typst = "https://typst.app"
+cascadia = "https://cascadiarconf.org/2025/"
+scientific_computing_rs = "https://scientificcomputing.rs"

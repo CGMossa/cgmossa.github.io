@@ -1,5 +1,8 @@
 {%- set org = org | default(value="") -%}
 {%- set org_url = org_url | default(value="") -%}
+{%- if org_url == "" and org_key is defined -%}
+  {%- set org_url = config.extra.org_urls[org_key] | default(value="") -%}
+{%- endif -%}
 {%- set meta = meta | default(value="") -%}
 <div class="cv-entry">
 <h3>{{ title }}</h3>

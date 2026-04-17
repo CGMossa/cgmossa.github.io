@@ -1,10 +1,13 @@
 <section class="hero">
+  {%- set github_url = github | default(value=config.extra.social_links.github) -%}
+  {%- set orcid_url = orcid | default(value=config.extra.social_links.orcid) -%}
+  {%- set linkedin_url = linkedin | default(value=config.extra.social_links.linkedin) -%}
   <h1>{{ config.title }}</h1>
   <p class="hero-subtitle">{{ subtitle }}</p>
   <div class="hero-summary">{{ body | markdown | safe }}</div>
   <div class="hero-links">
-    {%- if github is defined -%}<a href="{{ github }}" class="btn" target="_blank" rel="noopener">GitHub</a>{%- endif -%}
-    {%- if orcid is defined -%}<a href="{{ orcid }}" class="btn btn-outline" target="_blank" rel="noopener">ORCID</a>{%- endif -%}
-    {%- if linkedin is defined -%}<a href="{{ linkedin }}" class="btn btn-outline" target="_blank" rel="noopener">LinkedIn</a>{%- endif -%}
+    {%- if github_url -%}<a href="{{ github_url }}" class="btn" target="_blank" rel="noopener">GitHub</a>{%- endif -%}
+    {%- if orcid_url -%}<a href="{{ orcid_url }}" class="btn btn-outline" target="_blank" rel="noopener">ORCID</a>{%- endif -%}
+    {%- if linkedin_url -%}<a href="{{ linkedin_url }}" class="btn btn-outline" target="_blank" rel="noopener">LinkedIn</a>{%- endif -%}
   </div>
 </section>
