@@ -369,11 +369,11 @@ Attended.
 
 ## Links
 
-- [ORCID: 0009-0007-9297-1523](https://orcid.org/0009-0007-9297-1523)
+- {{ icon_link(icon="orcid", url="https://orcid.org/0009-0007-9297-1523", label="ORCID: 0009-0007-9297-1523") }}
 - {{ icon_link(icon="github", url="https://github.com/cgmossa", label="GitHub") }}
 - {{ icon_link(icon="linkedin", url="https://www.linkedin.com/in/cgmossa", label="LinkedIn") }}
-- {{ icon_link(icon="datacamp", url="https://www.datacamp.com/portfolio/cgmossa", label="DataCamp") }}
-- {{ icon_link(icon="exercism", url="https://exercism.org/profiles/CGMossa", label="Exercism") }}
+- {{ icon_link(icon="datacamp", url="https://www.datacamp.com/portfolio/cgmossa", label="DataCamp portfolio") }}
+- {{ icon_link(icon="exercism", url="https://exercism.org/profiles/CGMossa", label="Exercism profile") }}
 
 ## Coursework
 

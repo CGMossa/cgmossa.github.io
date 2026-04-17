@@ -72,10 +72,11 @@
   <footer class="site-footer">
     <div class="footer-inner">
       {% set github_icon = get_url(path='icons/github.svg') %}
+      {% set orcid_icon = get_url(path='icons/orcid.svg') %}
       {% set linkedin_icon = get_url(path='icons/linkedin.svg') %}
       <div class="footer-links">
         <a href="https://github.com/cgmossa" target="_blank" rel="noopener"><img src="{{ github_icon }}" alt="" class="link-icon">GitHub</a>
-        <a href="https://orcid.org/0009-0007-9297-1523" target="_blank" rel="noopener">ORCID</a>
+        <a href="https://orcid.org/0009-0007-9297-1523" target="_blank" rel="noopener"><img src="{{ orcid_icon }}" alt="" class="link-icon">ORCID</a>
         <a href="https://www.linkedin.com/in/cgmossa" target="_blank" rel="noopener"><img src="{{ linkedin_icon }}" alt="" class="link-icon">LinkedIn</a>
       </div>
       <p>&copy; {{ now() | date(format="%Y") }} Mossa Merhi Reimert</p>
