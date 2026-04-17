@@ -20,9 +20,9 @@ description = "A short summary shown in the post list."
 +++
 ```
 
-- `title` — required
-- `date` — required, determines sort order (newest first)
-- `description` — optional, shown under the title in the blog listing
+- `title` (required)
+- `date` (required), determines sort order (newest first)
+- `description` (optional), shown under the title in the blog listing
 
 ### Optional frontmatter fields
 
@@ -77,7 +77,7 @@ Put images in `static/images/` and reference them with an absolute path:
 zola serve
 ```
 
-Open http://127.0.0.1:1111 — the page live-reloads on save.
+Open http://127.0.0.1:1111, and the page live-reloads on save.
 
 ## 6. Publish
 

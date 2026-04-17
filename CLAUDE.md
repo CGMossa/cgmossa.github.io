@@ -14,23 +14,23 @@ zola check           # Validate links and config without building
 
 ## Directory structure
 
-- `config.toml` — Zola config (base URL, markdown settings, taxonomies)
-- `content/` — Markdown content, organised into sections:
-  - `_index.md` — Homepage (rendered by `templates/index.html`)
-  - `blog/` — Blog posts, sorted by date, paginated. Uses `blog-page.html` template.
-  - `cv/` — CV page with HTML markup for structured entries
-  - `projects/` — Project cards with HTML markup
-- `templates/` — Tera templates:
-  - `base.html` — Shared layout (nav, footer, head)
-  - `index.html` — Homepage
-  - `section.html` — Generic section listing
-  - `blog-page.html` — Blog post with reading time, tags, prev/next nav
-  - `page.html` — Generic page
-  - `404.html` — Custom 404
-  - `tags/list.html`, `tags/single.html` — Tag taxonomy pages
-- `sass/style.scss` — All styling (compiled by Zola)
-- `static/` — Static assets (images go in `static/images/`)
-- `.github/workflows/deploy.yml` — GitHub Actions: builds with Zola and deploys via GitHub Pages
+- `config.toml`: Zola config (base URL, markdown settings, taxonomies)
+- `content/`: Markdown content, organised into sections:
+  - `_index.md`: Homepage (rendered by `templates/index.html`)
+  - `blog/`: Blog posts, sorted by date, paginated. Uses `blog-page.html` template.
+  - `cv/`: CV page with HTML markup for structured entries
+  - `projects/`: Project cards with HTML markup
+- `templates/`: Tera templates:
+  - `base.html`: Shared layout (nav, footer, head)
+  - `index.html`: Homepage
+  - `section.html`: Generic section listing
+  - `blog-page.html`: Blog post with reading time, tags, prev/next nav
+  - `page.html`: Generic page
+  - `404.html`: Custom 404
+  - `tags/list.html`, `tags/single.html`: Tag taxonomy pages
+- `sass/style.scss`: All styling (compiled by Zola)
+- `static/`: Static assets (images go in `static/images/`)
+- `.github/workflows/deploy.yml`: GitHub Actions, builds with Zola and deploys via GitHub Pages
 
 ## Adding a blog post
 

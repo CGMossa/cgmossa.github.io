@@ -217,39 +217,39 @@ Specialisation in computational physics.
 ## Online Learning
 
 - Completed 110 DataCamp courses, 9 tracks, and 37 projects across R, SQL,
-  machine learning, and statistics —
-  [portfolio](https://www.datacamp.com/portfolio/cgmossa)
+  machine learning, and statistics
+  ([portfolio](https://www.datacamp.com/portfolio/cgmossa))
 - Completed the Exercism Rust track with 83 problems and iterative
-  review-driven refinement —
-  [profile](https://exercism.org/profiles/CGMossa)
+  review-driven refinement
+  ([profile](https://exercism.org/profiles/CGMossa))
 
 ## Publications
 
 - **Modelling PRRS transmission between pig herds in Denmark and prediction of
-  interventions impact** (2025) —
+  interventions impact** (2025).
   [doi:10.1016/j.prevetmed.2025.106692](https://doi.org/10.1016/j.prevetmed.2025.106692)
 - **Choice of landscape discretisation method affects the inferred rate of
-  spread in wildlife disease spread models** (2025) —
+  spread in wildlife disease spread models** (2025).
   [doi:10.1016/j.jtbi.2024.111963](https://doi.org/10.1016/j.jtbi.2024.111963)
 - **Assessing the Spatial and Temporal Risk of HPAIV Transmission to Danish
-  Cattle via Wild Birds** (2025) —
+  Cattle via Wild Birds** (2025).
   [arXiv:2504.12432](https://doi.org/10.48550/arXiv.2504.12432)
-- **extendr: Frictionless bindings for R and Rust** (2024) —
+- **extendr: Frictionless bindings for R and Rust** (2024).
   [doi:10.21105/joss.06394](https://doi.org/10.21105/joss.06394)
 - **Social network analysis reveals the failure of between-farm movement
-  restrictions to reduce Salmonella transmission** (2024) —
+  restrictions to reduce Salmonella transmission** (2024).
   [doi:10.3168/jds.2023-24554](https://doi.org/10.3168/jds.2023-24554)
 - **Using registry data to identify individual dairy cows with abnormal
-  patterns in routinely recorded somatic cell counts** (2024) —
+  patterns in routinely recorded somatic cell counts** (2024).
   [doi:10.1016/j.jtbi.2023.111718](https://doi.org/10.1016/j.jtbi.2023.111718)
 - **Spatial discretisation and anonymisation in R using CORINE land cover
-  data and the hexscape package** — Matt Denwood, Mossa Merhi Reimert, Carlijn
-  Bogaardt, Maya Katrin Gussmann, Carsten Thure Kirkeby and Jess Enright.
-  *Submitted to Preventive Veterinary Medicine.*
+  data and the hexscape package**, with Matt Denwood, Mossa Merhi Reimert,
+  Carlijn Bogaardt, Maya Katrin Gussmann, Carsten Thure Kirkeby and Jess
+  Enright. *Submitted to Preventive Veterinary Medicine.*
 - **Habitat-centric clustering of wildlife populations: methods and
-  implications for the population dynamics of wild boar** — Mossa Merhi
-  Reimert, Maya Katrin Gussmann, Anette Ella Boklund, Philip Rasmussen and Matt
-  Denwood. *In preparation for Ecological Modelling.*
+  implications for the population dynamics of wild boar**, with Mossa Merhi
+  Reimert, Maya Katrin Gussmann, Anette Ella Boklund, Philip Rasmussen and
+  Matt Denwood. *In preparation for Ecological Modelling.*
 
 ## Conferences
 
