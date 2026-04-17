@@ -21,7 +21,7 @@ internal_level = "warn"
 
 [extra]
 author = "Mossa Merhi Reimert"
-show_blog_in_nav = false
+show_blog_ui = false
 
 [extra.social_links]
 github = "https://github.com/cgmossa"

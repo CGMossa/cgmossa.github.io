@@ -5,12 +5,12 @@
 {{ section.content | safe }}
 </div>
 
-{% set show_blog_in_nav = true %}
-{% if config.extra.show_blog_in_nav is defined %}
-{% set show_blog_in_nav = config.extra.show_blog_in_nav %}
+{% set show_blog_ui = true %}
+{% if config.extra.show_blog_ui is defined %}
+{% set show_blog_ui = config.extra.show_blog_ui %}
 {% endif %}
 
-{% if show_blog_in_nav %}
+{% if show_blog_ui %}
 <section class="home-section">
   <h2>Blog</h2>
   {% set blog = get_section(path="blog/_index.md") %}

@@ -102,8 +102,9 @@ render = true
 In `config.toml` under `[extra]`:
 
 ```toml
-show_blog_in_nav = true
+show_blog_ui = true
 ```
 
-That will make `/blog/` render again and restore the Blog link in the navbar.
-Existing posts in `content/blog/` stay on disk either way.
+That will make `/blog/` render again and restore the blog-related UI on the
+site, including the navbar and the home page blog section. Existing posts in
+`content/blog/` stay on disk either way.
