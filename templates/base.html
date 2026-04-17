@@ -43,10 +43,7 @@
   </script>
 </head>
 <body>
-  {% set show_blog_ui = true %}
-  {% if config.extra.show_blog_ui is defined %}
-    {% set show_blog_ui = config.extra.show_blog_ui %}
-  {% endif %}
+  {% set show_blog_ui = config.extra.show_blog_ui | default(value=true) %}
   <nav class="site-nav">
     <div class="nav-inner">
       <a class="nav-logo" href="{{ get_url(path='/') }}">Mossa</a>

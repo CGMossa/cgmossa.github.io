@@ -5,12 +5,7 @@
 {{ section.content | safe }}
 </div>
 
-{% set show_blog_ui = true %}
-{% if config.extra.show_blog_ui is defined %}
-{% set show_blog_ui = config.extra.show_blog_ui %}
-{% endif %}
-
-{% if show_blog_ui %}
+{% if config.extra.show_blog_ui | default(value=true) %}
 <section class="home-section">
   <h2>Blog</h2>
   {% set blog = get_section(path="blog/_index.md") %}
