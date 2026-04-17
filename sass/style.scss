@@ -327,15 +327,13 @@ pre {
 }
 
 .section-layout.has-sidebar {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 220px;
-  gap: 2.5rem;
-  align-items: start;
+  h2, h3, h4, h5, h6 {
+    scroll-margin-top: calc(#{$nav-height} + 1rem);
+  }
 }
 
 .section-sidebar {
-  position: sticky;
-  top: calc(#{$nav-height} + 1.5rem);
+  display: none;
 }
 
 .section-nav {
@@ -343,14 +341,6 @@ pre {
   border: 1px solid $color-border;
   border-radius: $radius;
   background: $color-surface;
-
-  h2 {
-    font-size: 1rem;
-    margin: 0 0 0.8rem;
-    color: $color-text;
-    padding: 0;
-    border: 0;
-  }
 
   ul {
     list-style: none;
@@ -370,6 +360,20 @@ pre {
     &:hover {
       color: $color-primary;
     }
+  }
+}
+
+@media (min-width: 1320px) {
+  .section-layout.has-sidebar {
+    position: relative;
+  }
+
+  .section-layout.has-sidebar .section-sidebar {
+    display: block;
+    position: fixed;
+    top: calc(#{$nav-height} + 1.5rem);
+    left: calc(50% + (#{$max-width} / 2) + 2rem);
+    width: 220px;
   }
 }
 
@@ -618,8 +622,6 @@ pre {
   .hero-subtitle { font-size: 1rem; }
   .content { padding: 1.5rem 1rem 3rem; }
   .cv-entry { padding-left: 0.75rem; }
-  .section-layout.has-sidebar { display: block; }
-  .section-sidebar { display: none; }
 
   .nav-toggle { display: block; }
 
@@ -783,8 +785,6 @@ pre {
   .section-nav {
     background: var(--surface);
     border-color: var(--border);
-
-    h2 { color: var(--text); }
     a {
       color: var(--text-muted);
       &:hover { color: var(--primary); }

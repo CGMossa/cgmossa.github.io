@@ -66,7 +66,6 @@
   {% if show_section_nav %}
   <aside class="section-sidebar" aria-label="Section navigation">
     <nav class="section-nav">
-      <h2>Sections</h2>
       <ul>
         {% for heading in section.toc %}
         <li><a href="{{ heading.permalink | safe }}">{{ heading.title }}</a></li>
