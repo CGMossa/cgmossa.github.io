@@ -116,6 +116,10 @@ Specialisation in computational physics.
 
 ## Conferences
 
+{% cv_entry(title="2026 Typst Meetup Berlin", org="Typst", org_url="https://typst.app", meta="Berlin · 28 February 2026 · 14:30 CET") %}
+Attended.
+{% end %}
+
 {% cv_entry(title="Cascadia R Conf 2025", org="cascadiarconf.org", org_url="https://cascadiarconf.org/2025/", meta="Portland, OR · 20 June 2025") %}
 Co-authored [workshop material](https://josiahparry.github.io/2025-cascadia-rust-for-r-devs/) with Josiah Parry for two workshops: "[Intro to Rust for R Developers](https://cascadiarconf.org/2025/workshop/rust1/)" and "[Building Rust based R Packages](https://cascadiarconf.org/2025/workshop/rust2/)" using extendr.
 {% end %}
