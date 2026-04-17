@@ -4,6 +4,8 @@
   {%- set org_url = config.extra.org_urls[org_key] | default(value="") -%}
 {%- endif -%}
 {%- set meta = meta | default(value="") -%}
+{%- set collapsible = collapsible | default(value=false) -%}
+{%- set summary = summary | default(value="Details") -%}
 <div class="cv-entry">
 <h3>{{ title }}</h3>
 {%- if org or meta %}
@@ -13,5 +15,13 @@
 {%- if meta -%}{{ meta }}{%- endif -%}
 </div>
 {%- endif %}
-{%- if body %}{{ body | markdown | safe }}{% endif -%}
+{%- if body -%}
+  {%- if collapsible %}
+<details><summary>{{ summary }}</summary>
+{{ body | markdown | safe }}
+</details>
+  {%- else -%}
+{{ body | markdown | safe }}
+  {%- endif -%}
+{%- endif -%}
 </div>

@@ -377,7 +377,7 @@ Attended.
 
 ## Coursework
 
-{% cv_entry(title="MSc in Statistics (2016–2018)") %}
+{% cv_entry(title="MSc in Statistics (2016–2018)", collapsible=true, summary="Show courses") %}
 
 - Discrete Models
 - Regression
@@ -392,7 +392,7 @@ Attended.
 
 {% end %}
 
-{% cv_entry(title="BSc in Mathematics (2013–2015)") %}
+{% cv_entry(title="BSc in Mathematics (2013–2015)", collapsible=true, summary="Show courses") %}
 
 - Discrete Mathematics
 - Probability Theory and Statistics
@@ -407,7 +407,7 @@ Attended.
 
 {% end %}
 
-{% cv_entry(title="BSc in Science & IT (2010–2013)") %}
+{% cv_entry(title="BSc in Science & IT (2010–2013)", collapsible=true, summary="Show courses") %}
 
 - Introduction to Mathematics for Science
 - Modelling in Science
