@@ -494,6 +494,10 @@ pre {
   }
 }
 
+.section-page > p + .project-card {
+  margin-top: 1.5rem;
+}
+
 // ── Footer ────────────────────────────────────────────
 .site-footer {
   border-top: 1px solid $color-border;

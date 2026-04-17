@@ -91,7 +91,19 @@ GitHub Actions builds and deploys automatically.
 
 ## Re-enable the blog section
 
-If the blog index page is disabled, set `render = true` in `content/blog/_index.md`
-to make `/blog/` render again, and set `show_blog_in_nav = true` under
-`[extra]` in `config.toml` to show the Blog link in the site navigation again.
+If the blog index page is disabled, update both of these settings:
+
+In `content/blog/_index.md`:
+
+```toml
+render = true
+```
+
+In `config.toml` under `[extra]`:
+
+```toml
+show_blog_in_nav = true
+```
+
+That will make `/blog/` render again and restore the Blog link in the navbar.
 Existing posts in `content/blog/` stay on disk either way.
