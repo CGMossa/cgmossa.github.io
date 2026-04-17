@@ -65,6 +65,7 @@ and presented at international conferences in veterinary epidemiology, spatial m
 {% end %}
 
 {% cv_entry(title="Participant, Kod i Ferien", org="Danish Agency for Digitisation", meta="2011–2012") %}
+- Participated twice in Kod i Ferien, a Danish programme comparable to Google Summer of Code
 - Planned and implemented a web-backend product using Django and NemHandel
 - Worked with open-government initiatives through [digitaliser.dk](https://digitaliser.dk/)
 {% end %}
