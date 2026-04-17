@@ -1,7 +1,7 @@
 <section class="hero">
-  {%- set github_url = github | default(value=config.extra.social_links.github) -%}
-  {%- set orcid_url = orcid | default(value=config.extra.social_links.orcid) -%}
-  {%- set linkedin_url = linkedin | default(value=config.extra.social_links.linkedin) -%}
+  {%- set github_url = config.extra.social_links.github -%}
+  {%- set orcid_url = config.extra.social_links.orcid -%}
+  {%- set linkedin_url = config.extra.social_links.linkedin -%}
   {%- set github_icon = get_url(path='icons/github.svg') -%}
   {%- set linkedin_icon = get_url(path='icons/linkedin.svg') -%}
   <h1>{{ config.title }}</h1>
