@@ -32,7 +32,6 @@ $radius: 6px;
   --btn-text: #ffffff;
   --shadow-card: 0 2px 12px rgba(0, 0, 0, 0.06);
   --focus-ring: rgba(81, 22, 96, 0.45);
-  --link-icon-filter: none;
 }
 
 [data-theme="dark"] {
@@ -55,7 +54,10 @@ $radius: 6px;
   --btn-text: #1a1a2e;
   --shadow-card: 0 2px 12px rgba(0, 0, 0, 0.2);
   --focus-ring: rgba(192, 132, 252, 0.55);
-  --link-icon-filter: brightness(0) invert(1);
+}
+
+[data-theme="dark"] .link-icon {
+  filter: brightness(0) invert(1);
 }
 
 // ── Reset & Base ──────────────────────────────────────
@@ -100,7 +102,6 @@ img { max-width: 100%; height: auto; }
   width: auto;
   max-width: none;
   flex: 0 0 auto;
-  filter: var(--link-icon-filter);
 }
 
 .btn-with-icon,
