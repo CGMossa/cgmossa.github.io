@@ -5,6 +5,12 @@
 {{ section.content | safe }}
 </div>
 
+{% set show_blog_in_nav = true %}
+{% if config.extra.show_blog_in_nav is defined %}
+{% set show_blog_in_nav = config.extra.show_blog_in_nav %}
+{% endif %}
+
+{% if show_blog_in_nav %}
 <section class="home-section">
   <h2>Blog</h2>
   {% set blog = get_section(path="blog/_index.md") %}
@@ -22,4 +28,5 @@
   <p class="muted">No posts yet.</p>
   {% endif %}
 </section>
+{% endif %}
 {% endblock %}

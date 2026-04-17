@@ -50,13 +50,4 @@ A Rust-R interoperability framework for building R packages with Rust backends,
 including ExternalPtr wrappers, ALTREP support, and CRAN-ready packaging.
 {% end %}
 
-{% project_card(
-title="miniR",
-url_key="minir",
-tags="Rust, R, Interpreter"
-) %}
-An R interpreter written in Rust, aimed at real package code rather than
-toy examples, with growing compatibility and native extension loading.
-{% end %}
-
 [More projects →](/projects/)

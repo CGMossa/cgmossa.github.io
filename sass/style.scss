@@ -22,13 +22,16 @@ $radius: 6px;
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 html {
-  font-size: 17px;
+  font-size: 18px;
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
 }
 
-body {
+body, button, input, textarea, select {
   font-family: $font-body;
+}
+
+body {
   font-weight: 500;
   color: $color-text;
   background: $color-bg;
@@ -182,6 +185,7 @@ pre {
 // ── Buttons ───────────────────────────────────────────
 .btn {
   display: inline-block;
+  font-family: $font-body;
   padding: 0.55em 1.3em;
   border-radius: $radius;
   font-weight: 600;
@@ -340,6 +344,7 @@ pre {
 
 .tag {
   display: inline-block;
+  font-family: $font-body;
   background: $color-hover;
   color: $color-primary;
   padding: 0.2em 0.7em;
@@ -446,6 +451,7 @@ pre {
 
 .skill-tag {
   display: inline-block;
+  font-family: $font-body;
   background: $color-hover;
   color: $color-primary;
   padding: 0.3em 0.8em;
@@ -471,12 +477,18 @@ pre {
     margin-bottom: 0.3rem;
     a { font-weight: 600; }
   }
-  p { font-size: 0.93rem; color: $color-text-muted; margin-bottom: 0.5rem; }
+  p {
+    font-family: $font-body;
+    font-size: 0.96rem;
+    color: $color-text-muted;
+    margin-bottom: 0.5rem;
+  }
   .project-tags {
     display: flex;
     gap: 0.4rem;
     flex-wrap: wrap;
     span {
+      font-family: $font-body;
       font-size: 0.78rem;
       background: darken($color-bg, 3%);
       padding: 0.2em 0.6em;
