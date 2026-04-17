@@ -152,6 +152,11 @@ Attended.
 
 - Review Editor for Frontiers, Editorial Board of Veterinary Epidemiology and Economics, Frontiers in Veterinary Science
 - Maintainer in the [extendr](https://extendr.github.io/) open-source ecosystem for R and Rust interoperability
+- Partner-sponsored developer at A2-Ai in the RSMF-backed project [Enabling the Next Generation of Contributors to R](https://blog.r-project.org/2025/12/17/rsmf-enabling-the-next-generation-of-contributors-to-r/)
+
+## Grants
+
+- Grant proposal accepted by the R Consortium Infrastructure Steering Committee for **"extendr: Modern OOP tools"** (2025), covering the `vctrs/S3 Support` and `S7 Support` milestones
 
 ## Awards
 
