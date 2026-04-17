@@ -4,60 +4,76 @@
 {% block og_title %}{{ section.title }} | {{ config.title }}{% endblock %}
 
 {% block content %}
-<article class="section-page">
-  <h1>{{ section.title }}</h1>
-  {{ section.content | safe }}
+{% set show_section_nav = section.path == "/cv/" and section.toc | length > 0 %}
+<div class="{% if show_section_nav %}section-layout has-sidebar{% endif %}">
+  <article class="section-page">
+    <h1>{{ section.title }}</h1>
+    {{ section.content | safe }}
 
-  {% if paginator is defined %}
-  <ul class="post-list">
-    {% for page in paginator.pages %}
-    <li>
-      <a href="{{ page.permalink }}">{{ page.title }}</a>
-      <span class="post-list-meta">
-        {% if page.date %}
-        <time>{{ page.date | date(format="%b %d, %Y") }}</time>
+    {% if paginator is defined %}
+    <ul class="post-list">
+      {% for page in paginator.pages %}
+      <li>
+        <a href="{{ page.permalink }}">{{ page.title }}</a>
+        <span class="post-list-meta">
+          {% if page.date %}
+          <time>{{ page.date | date(format="%b %d, %Y") }}</time>
+          {% endif %}
+          {% if page.reading_time %}
+          <span class="reading-time">{{ page.reading_time }} min</span>
+          {% endif %}
+        </span>
+        {% if page.description %}
+        <span class="post-desc">{{ page.description }}</span>
         {% endif %}
-        {% if page.reading_time %}
-        <span class="reading-time">{{ page.reading_time }} min</span>
-        {% endif %}
-      </span>
-      {% if page.description %}
-      <span class="post-desc">{{ page.description }}</span>
+      </li>
+      {% endfor %}
+    </ul>
+    {% if paginator.number_pagers > 1 %}
+    <nav class="pagination">
+      {% if paginator.previous %}
+      <a href="{{ paginator.previous }}">&larr; Newer</a>
       {% endif %}
-    </li>
-    {% endfor %}
-  </ul>
-  {% if paginator.number_pagers > 1 %}
-  <nav class="pagination">
-    {% if paginator.previous %}
-    <a href="{{ paginator.previous }}">&larr; Newer</a>
+      <span>Page {{ paginator.current_index }} of {{ paginator.number_pagers }}</span>
+      {% if paginator.next %}
+      <a href="{{ paginator.next }}">Older &rarr;</a>
+      {% endif %}
+    </nav>
     {% endif %}
-    <span>Page {{ paginator.current_index }} of {{ paginator.number_pagers }}</span>
-    {% if paginator.next %}
-    <a href="{{ paginator.next }}">Older &rarr;</a>
-    {% endif %}
-  </nav>
-  {% endif %}
 
-  {% elif section.pages | length > 0 %}
-  <ul class="post-list">
-    {% for page in section.pages %}
-    <li>
-      <a href="{{ page.permalink }}">{{ page.title }}</a>
-      <span class="post-list-meta">
-        {% if page.date %}
-        <time>{{ page.date | date(format="%b %d, %Y") }}</time>
+    {% elif section.pages | length > 0 %}
+    <ul class="post-list">
+      {% for page in section.pages %}
+      <li>
+        <a href="{{ page.permalink }}">{{ page.title }}</a>
+        <span class="post-list-meta">
+          {% if page.date %}
+          <time>{{ page.date | date(format="%b %d, %Y") }}</time>
+          {% endif %}
+          {% if page.reading_time %}
+          <span class="reading-time">{{ page.reading_time }} min</span>
+          {% endif %}
+        </span>
+        {% if page.description %}
+        <span class="post-desc">{{ page.description }}</span>
         {% endif %}
-        {% if page.reading_time %}
-        <span class="reading-time">{{ page.reading_time }} min</span>
-        {% endif %}
-      </span>
-      {% if page.description %}
-      <span class="post-desc">{{ page.description }}</span>
-      {% endif %}
-    </li>
-    {% endfor %}
-  </ul>
+      </li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </article>
+
+  {% if show_section_nav %}
+  <aside class="section-sidebar" aria-label="Section navigation">
+    <nav class="section-nav">
+      <h2>Sections</h2>
+      <ul>
+        {% for heading in section.toc %}
+        <li><a href="{{ heading.permalink | safe }}">{{ heading.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </aside>
   {% endif %}
-</article>
+</div>
 {% endblock %}

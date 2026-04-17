@@ -53,6 +53,21 @@ a {
 
 img { max-width: 100%; height: auto; }
 
+.link-icon {
+  height: 1rem;
+  width: auto;
+  max-width: none;
+  flex: 0 0 auto;
+}
+
+.btn-with-icon,
+.icon-link,
+.footer-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
 code {
   font-family: $font-mono;
   font-size: 0.9em;
@@ -311,6 +326,53 @@ pre {
   }
 }
 
+.section-layout.has-sidebar {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 220px;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.section-sidebar {
+  position: sticky;
+  top: calc(#{$nav-height} + 1.5rem);
+}
+
+.section-nav {
+  padding: 1rem 1.1rem;
+  border: 1px solid $color-border;
+  border-radius: $radius;
+  background: $color-surface;
+
+  h2 {
+    font-size: 1rem;
+    margin: 0 0 0.8rem;
+    color: $color-text;
+    padding: 0;
+    border: 0;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li + li {
+    margin-top: 0.55rem;
+  }
+
+  a {
+    display: block;
+    font-size: 0.9rem;
+    color: $color-text-muted;
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+}
+
 .page-header {
   margin-bottom: 2rem;
   padding-bottom: 1rem;
@@ -537,6 +599,7 @@ pre {
   gap: 1.5rem;
   margin-bottom: 0.8rem;
   a {
+    font-family: $font-body;
     font-size: 0.9rem;
     color: $color-text-muted;
     font-weight: 500;
@@ -555,6 +618,8 @@ pre {
   .hero-subtitle { font-size: 1rem; }
   .content { padding: 1.5rem 1rem 3rem; }
   .cv-entry { padding-left: 0.75rem; }
+  .section-layout.has-sidebar { display: block; }
+  .section-sidebar { display: none; }
 
   .nav-toggle { display: block; }
 
@@ -621,6 +686,10 @@ pre {
   a {
     color: var(--primary);
     &:hover { color: var(--accent); }
+  }
+
+  .link-icon {
+    filter: brightness(0) invert(1);
   }
 
   code {
@@ -709,6 +778,17 @@ pre {
   .section-page h2 {
     color: var(--primary);
     border-bottom-color: var(--primary);
+  }
+
+  .section-nav {
+    background: var(--surface);
+    border-color: var(--border);
+
+    h2 { color: var(--text); }
+    a {
+      color: var(--text-muted);
+      &:hover { color: var(--primary); }
+    }
   }
 
   .home-content {

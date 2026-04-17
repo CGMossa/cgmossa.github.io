@@ -36,13 +36,7 @@ modelling, and scientific computing.
 
 ## Skills
 
-{{
-  skills(
-    list="R, Rust, Git & GitHub Actions, MATLAB, Python, PyTorch, C#, "
-      ~ "C / C++, Bash, Statistical modelling, Scientific computing, "
-      ~ "Technical teaching"
-  )
-}}
+{{ skills(list="R, Rust, Git & GitHub Actions, MATLAB, Python, PyTorch, C#, C / C++, Bash, Typst, Statistical modelling, Scientific computing, Technical teaching") }}
 
 ## Experience
 
@@ -380,10 +374,10 @@ Attended.
 ## Links
 
 - [ORCID: 0009-0007-9297-1523](https://orcid.org/0009-0007-9297-1523)
-- [GitHub](https://github.com/cgmossa)
-- [LinkedIn](https://www.linkedin.com/in/cgmossa)
-- [DataCamp](https://www.datacamp.com/portfolio/cgmossa)
-- [Exercism](https://exercism.org/profiles/CGMossa)
+- <a href="https://github.com/cgmossa" class="icon-link"><img src="/icons/github.svg" alt="" class="link-icon">GitHub</a>
+- <a href="https://www.linkedin.com/in/cgmossa" class="icon-link"><img src="/icons/linkedin.svg" alt="" class="link-icon">LinkedIn</a>
+- <a href="https://www.datacamp.com/portfolio/cgmossa" class="icon-link"><img src="/icons/datacamp.svg" alt="" class="link-icon">DataCamp</a>
+- <a href="https://exercism.org/profiles/CGMossa" class="icon-link"><img src="/icons/exercism.svg" alt="" class="link-icon">Exercism</a>
 
 ## Coursework
 
