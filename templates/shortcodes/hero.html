@@ -6,7 +6,7 @@
   <p class="hero-subtitle">{{ subtitle }}</p>
   <div class="hero-summary">{{ body | markdown | safe }}</div>
   <div class="hero-links">
-    {%- if github_url -%}<a href="{{ github_url }}" class="btn" target="_blank" rel="noopener">GitHub</a>{%- endif -%}
+    {%- if github_url -%}<a href="{{ github_url }}" class="btn btn-outline" target="_blank" rel="noopener">GitHub</a>{%- endif -%}
     {%- if orcid_url -%}<a href="{{ orcid_url }}" class="btn btn-outline" target="_blank" rel="noopener">ORCID</a>{%- endif -%}
     {%- if linkedin_url -%}<a href="{{ linkedin_url }}" class="btn btn-outline" target="_blank" rel="noopener">LinkedIn</a>{%- endif -%}
   </div>
