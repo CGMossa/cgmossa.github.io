@@ -36,7 +36,7 @@ modelling, and scientific computing.
 
 ## Skills
 
-{{ skills(list="R, Rust, Git & GitHub Actions, MATLAB, Python, PyTorch, C#, C / C++, Bash, Typst, Statistical modelling, Scientific computing, Technical teaching") }}
+{{ skills(list="R, Rust, Foreign Function Interface (FFI), Git & GitHub Actions, MATLAB, Python, PyTorch, C#, C / C++, Bash, Typst, Statistical modelling, Scientific computing, Technical teaching") }}
 
 ## Experience
 
@@ -254,7 +254,7 @@ Specialisation in computational physics.
 ## Conferences
 
 {% cv_entry(
-title="2026 Typst Meetup Berlin",
+title="Typst Meetup Berlin 2026",
 org="Typst",
 org_key="typst",
 meta="Berlin · 28 February 2026 · 14:30 CET"

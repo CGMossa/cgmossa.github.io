@@ -4,7 +4,7 @@ description = "Mossa Merhi Reimert builds research software, modelling tools, an
 +++
 
 {% hero(
-subtitle="Software Engineer · Researcher · Open-Source Maintainer"
+subtitle="Scientific Software Engineer · Researcher · Open-Source Maintainer"
 ) %}
 R/Rust programmer and statistical modeller. Senior Scientific Software
 Engineer at [**A2-Ai**](https://a2-ai.com). I build robust technical systems for
