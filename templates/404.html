@@ -3,8 +3,17 @@
 {% block title %}404 — Page not found | {{ config.title }}{% endblock %}
 
 {% block content %}
-<article class="section-page">
+<article class="section-page not-found-page">
   <h1>404 — Page not found</h1>
+  <figure class="not-found-figure">
+    <a href="https://commons.wikimedia.org/wiki/File:Girl_and_Pigs_MET_DP820211.jpg" target="_blank" rel="noopener">
+      <img
+        src="https://commons.wikimedia.org/wiki/Special:FilePath/Girl%20and%20Pigs%20MET%20DP820211.jpg"
+        alt="Girl and Pigs"
+      >
+    </a>
+    <figcaption>Gift of Leo Steinberg, 1999,</figcaption>
+  </figure>
   <p>The page you're looking for doesn't exist or has been moved.</p>
   <p><a href="{{ get_url(path='/') }}">Back to home</a></p>
 </article>
