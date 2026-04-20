@@ -36,7 +36,7 @@ tags="Rust, R, FFI, CRAN"
 A Rust-R interoperability framework for building R packages with Rust backends.
 Features ExternalPtr wrappers, ALTREP support, S3/S4/R6 class systems, worker-thread
 execution, and CRAN-ready vendored packaging. Includes a
-[documentation site](https://cgmossa.github.io/miniextendr/) with
+[documentation site](https://a2-ai.github.io/miniextendr/) with
 70+ reference pages.
 {% end %}
 
