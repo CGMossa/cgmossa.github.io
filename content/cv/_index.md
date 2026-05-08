@@ -180,6 +180,8 @@ org="University of Copenhagen",
 meta="2011–2018"
 ) %}
 
+- Held TA roles across a seven-year span (2011–2018), totalling roughly two
+  years of cumulative teaching alongside studies and other work
 - Taught across databases and web programming, programming and problem
   solving, data mining, statistics, numerical analysis, and modelling
 - Supported both undergraduate and graduate teaching, including theoretical
@@ -334,8 +336,8 @@ Science, including:
 - Modelling in science
 
 Responsibilities spanned exercise sessions, problem-set design, grading, and
-one-on-one student support across more than seven years of continuous
-teaching.
+one-on-one student support. Roughly two years of cumulative TA work spread
+across a seven-year span (2011–2018), held alongside studies and other roles.
 
 {% end %}
 
