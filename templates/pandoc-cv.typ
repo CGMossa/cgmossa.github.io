@@ -22,4 +22,16 @@ $endif$$if(personal-site)$  personal-site: "$personal-site$",
 $endif$$if(accent-color)$  accent-color: $accent-color$,
 $endif$)
 
+$if(avatar)$
+#place(
+  top + right,
+  dx: -0.5in,
+  dy: -0.5in,
+  box(
+    clip: true,
+    radius: 50%,
+    image("$avatar$", width: 0.85in),
+  ),
+)
+$endif$
 $body$

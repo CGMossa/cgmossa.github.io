@@ -59,10 +59,11 @@ cv-pdf:
         -V author="Mossa Merhi Reimert" \
         -V location="Copenhagen, Denmark" \
         -V email="mossa@a2-ai.com" \
-        -V github="cgmossa" \
-        -V linkedin="cgmossa" \
-        -V personal-site="cgmossa.github.io"
-    typst compile {{build_dir}}/cv.typ static/cv.pdf
+        -V github="github.com/cgmossa" \
+        -V linkedin="linkedin.com/in/cgmossa" \
+        -V personal-site="ministats.dev" \
+        -V avatar="/static/images/mossa-avatar-normal.png"
+    typst compile --root . {{build_dir}}/cv.typ static/cv.pdf
     echo "static/cv.pdf — $(du -h static/cv.pdf | cut -f1 | tr -d ' ')"
 
 # Remove the generated PDF and intermediate typst output.

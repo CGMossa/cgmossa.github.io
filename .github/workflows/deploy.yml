@@ -54,10 +54,11 @@ jobs:
               -V author="Mossa Merhi Reimert" \
               -V location="Copenhagen, Denmark" \
               -V email="mossa@a2-ai.com" \
-              -V github="cgmossa" \
-              -V linkedin="cgmossa" \
-              -V personal-site="cgmossa.github.io"
-          typst compile .build/cv.typ static/cv.pdf
+              -V github="github.com/cgmossa" \
+              -V linkedin="linkedin.com/in/cgmossa" \
+              -V personal-site="ministats.dev" \
+              -V avatar="/static/images/mossa-avatar-normal.png"
+          typst compile --root . .build/cv.typ static/cv.pdf
 
       - name: Build site
         run: zola build
