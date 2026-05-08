@@ -214,6 +214,45 @@ Specialisation in computational physics.
 
 {% end %}
 
+## Teaching Portfolio
+
+{% cv_entry(
+title="External Lecturer, Artificial Neural Networks and Deep Learning",
+org="DIS Study Abroad",
+org_key="dis",
+meta="Copenhagen · Spring 2025"
+) %}
+
+- Designed and delivered an upper-division course on artificial neural networks
+  and deep learning for visiting international students
+- Covered foundations through modern architectures, with hands-on
+  implementation work alongside the theoretical material
+
+{% end %}
+
+{% cv_entry(
+title="Teaching Assistant",
+org="University of Copenhagen",
+meta="2011–2018"
+) %}
+
+Taught and supported a broad range of undergraduate and graduate courses in
+the Department of Mathematical Sciences and the Department of Computer
+Science, including:
+
+- Databases and web programming
+- Programming and problem solving
+- Data mining
+- Statistics 1 and 2 (theoretical statistics)
+- Numerical analysis
+- Modelling in science
+
+Responsibilities spanned exercise sessions, problem-set design, grading, and
+one-on-one student support across more than seven years of continuous
+teaching.
+
+{% end %}
+
 ## Online Learning
 
 - Completed 110 DataCamp courses, 9 tracks, and 37 projects across R, SQL,
