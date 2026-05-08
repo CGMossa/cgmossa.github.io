@@ -66,6 +66,11 @@
 
   {% if show_section_nav %}
   <aside class="section-sidebar" aria-label="Section navigation">
+    {% if section.path == "/cv/" %}
+    <a href="{{ get_url(path='cv.pdf') }}" class="icon-link cv-download" aria-label="Download CV as PDF" download>
+      <img src="{{ get_url(path='icons/pdf.svg') }}" alt="" class="link-icon">
+    </a>
+    {% endif %}
     <nav class="section-nav">
       <ul>
         {% for heading in section.toc %}

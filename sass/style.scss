@@ -314,6 +314,15 @@ pre {
   }
 }
 
+.section-sidebar .cv-download {
+  display: block;
+  width: fit-content;
+  margin: 0 auto 1rem;
+  .link-icon {
+    height: 2.5rem;
+  }
+}
+
 // ── Home Sections ─────────────────────────────────────
 .home-section {
   margin-bottom: 2.5rem;

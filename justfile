@@ -35,3 +35,37 @@ new-blog slug title='' description='':
     EOF
 
     printf 'Created %s\n' "$file"
+
+# --- CV PDF ---
+
+build_dir := ".build"
+
+# Build static/cv.pdf from content/cv/_index.md via pandoc + typst.
+# Requires: pandoc 3.x (with typst writer), typst.
+cv-pdf:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    mkdir -p {{build_dir}}
+    # Strip TOML frontmatter (pandoc only knows YAML) and the
+    # margin-photo figures (multi-line HTML pandoc fragments badly).
+    sed -e '/^+++$/,/^+++$/d' \
+        -e '/<figure class="cv-margin-photo"/,/<\/figure>/d' \
+        content/cv/_index.md > {{build_dir}}/cv.md
+    pandoc {{build_dir}}/cv.md -o {{build_dir}}/cv.typ -t typst \
+        --template=templates/pandoc-cv.typ \
+        --lua-filter=scripts/cv-shortcodes.lua \
+        --from=markdown-smart \
+        --standalone --wrap=none \
+        -V author="Mossa Merhi Reimert" \
+        -V location="Copenhagen, Denmark" \
+        -V email="mossa@a2-ai.com" \
+        -V github="cgmossa" \
+        -V linkedin="cgmossa" \
+        -V personal-site="cgmossa.github.io"
+    typst compile {{build_dir}}/cv.typ static/cv.pdf
+    echo "static/cv.pdf — $(du -h static/cv.pdf | cut -f1 | tr -d ' ')"
+
+# Remove the generated PDF and intermediate typst output.
+clean-cv-pdf:
+    rm -rf {{build_dir}}
+    rm -f static/cv.pdf
