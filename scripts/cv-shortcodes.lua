@@ -58,9 +58,9 @@ end
 
 local function entry_blocks(args, section)
   if section == "Education" then
-    return { pandoc.RawBlock("typst", edu_call(args)) }
-  elseif section == "Experience" then
-    return { pandoc.RawBlock("typst", work_call(args)) }
+    return { pandoc.RawBlock("typst", "\n" ..edu_call(args)) }
+  elseif section == "Experience" or section == "Research Software" then
+    return { pandoc.RawBlock("typst", "\n" ..work_call(args)) }
   else
     local out = {}
     table.insert(out, pandoc.Header(3, args.title or "Untitled"))
@@ -183,7 +183,7 @@ function Pandoc(doc)
     if grid_cfg.text_size then
       grid_call = string.format("#[\n#set text(size: %s)\n%s\n]", grid_cfg.text_size, grid_call)
     end
-    out:insert(pandoc.RawBlock("typst", grid_call))
+    out:insert(pandoc.RawBlock("typst", "\n" ..grid_call))
     grid_cells = pandoc.List()
     grid_cfg = nil
   end
@@ -210,7 +210,10 @@ function Pandoc(doc)
       if current_section == "Links" then
         local nxt = doc.blocks[i + 1]
         if nxt and nxt.t == "BulletList" then
-          out:insert(flatten_bullet_list(nxt))
+          local para = flatten_bullet_list(nxt)
+          local typst = pandoc.write(pandoc.Pandoc({ para }), "typst")
+          out:insert(pandoc.RawBlock("typst", "\n" ..
+            "#align(center)[\n" .. typst .. "]\n"))
           i = i + 1
         end
       end
@@ -250,7 +253,7 @@ function Pandoc(doc)
               table.insert(parts,
                 string.format('#skill-chip("%s")', escape_typst(skill)))
             end
-            place(pandoc.RawBlock("typst", table.concat(parts, " #h(0.4em) ")))
+            place(pandoc.RawBlock("typst", "\n" ..table.concat(parts, " #h(0.4em) ")))
           end
         else
           place(blk)

@@ -431,6 +431,15 @@ pre {
     text-decoration: underline;
     text-underline-offset: 2px;
   }
+  #links + ul {
+    list-style: none;
+    padding-left: 0;
+    text-align: center;
+    li {
+      display: inline-block;
+      margin: 0 0.6rem;
+    }
+  }
 }
 
 .section-layout.has-sidebar {
