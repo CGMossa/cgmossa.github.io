@@ -14,6 +14,14 @@ $endif$
 
 #let cv-font = ("Helvetica Neue", "Helvetica", "Arial")
 
+#let skill-chip(name) = box(
+  fill: rgb("f6f8fa"),
+  stroke: 0.5pt + rgb("d0d7de"),
+  inset: (x: 6pt, y: 3pt),
+  radius: 4pt,
+  outset: (y: 2pt),
+)[#name]
+
 #show: resume.with(
   author: "$author$",
 $if(location)$  location: "$location$",

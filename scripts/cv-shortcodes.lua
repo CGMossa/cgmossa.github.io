@@ -92,6 +92,38 @@ local function match_skills(txt)
   return txt:match("^%s*{{%s*skills%s*%((.-)%)%s*}}%s*$")
 end
 
+local PLATFORM_ICONS = {
+  DataCamp = "/static/icons/datacamp.svg",
+  Exercism = "/static/icons/exercism.svg",
+}
+
+local function prefix_item_with_icon(item)
+  local item_text = pandoc.utils.stringify(item)
+  local icon_path
+  for keyword, path in pairs(PLATFORM_ICONS) do
+    if item_text:find(keyword) then
+      icon_path = path
+      break
+    end
+  end
+  if not icon_path then return item end
+  local icon_inline = pandoc.RawInline(
+    "typst",
+    string.format('#box(image("%s", height: 0.9em)) ', icon_path)
+  )
+  local first = item[1]
+  if first and (first.t == "Para" or first.t == "Plain") then
+    local new_inlines = pandoc.List()
+    new_inlines:insert(icon_inline)
+    for _, ii in ipairs(first.content) do new_inlines:insert(ii) end
+    local new_item = pandoc.List()
+    new_item:insert(pandoc.Plain(new_inlines))
+    for j = 2, #item do new_item:insert(item[j]) end
+    return new_item
+  end
+  return item
+end
+
 local function flatten_bullet_list(bl)
   local inlines = pandoc.List()
   for i, item in ipairs(bl.content) do
@@ -185,6 +217,12 @@ function Pandoc(doc)
     elseif blk.t == "RawBlock" and blk.format == "html"
        and blk.text:find("cv%-margin%-photo") then
       -- drop margin-photo figures from PDF
+    elseif blk.t == "BulletList" and current_section == "Online Learning" then
+      local new_items = pandoc.List()
+      for _, item in ipairs(blk.content) do
+        new_items:insert(prefix_item_with_icon(item))
+      end
+      place(pandoc.BulletList(new_items))
     elseif blk.t == "Para" or blk.t == "Plain" then
       local txt = as_text(blk)
       local args_str = match_block_open(txt) or match_inline_call(txt)
@@ -206,7 +244,13 @@ function Pandoc(doc)
         if skills_args then
           local list = skills_args:match('list%s*=%s*"([^"]*)"') or ""
           if list ~= "" then
-            place(pandoc.Para({ pandoc.Str(list) }))
+            local parts = {}
+            for skill in list:gmatch("[^,]+") do
+              skill = skill:gsub("^%s+", ""):gsub("%s+$", "")
+              table.insert(parts,
+                string.format('#skill-chip("%s")', escape_typst(skill)))
+            end
+            place(pandoc.RawBlock("typst", table.concat(parts, " #h(0.4em) ")))
           end
         else
           place(blk)
