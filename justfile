@@ -3,6 +3,18 @@ set shell := ["bash", "-cu"]
 default:
     @just --list
 
+# Live-reload dev server at http://127.0.0.1:1111
+serve:
+    zola serve
+
+# Build site to public/ (gitignored)
+build:
+    zola build
+
+# Validate links and config without building
+check:
+    zola check
+
 markdownlint:
     npx --yes markdownlint-cli "content/**/*.md"
 
@@ -51,7 +63,7 @@ cv-pdf:
     sed -e '/^+++$/,/^+++$/d' \
         -e '/<figure class="cv-margin-photo"/,/<\/figure>/d' \
         content/cv/_index.md > {{build_dir}}/cv.md
-    pandoc {{build_dir}}/cv.md -o {{build_dir}}/cv.typ -t typst \
+    pandoc {{build_dir}}/cv.md -o cv.typ -t typst \
         --template=templates/pandoc-cv.typ \
         --lua-filter=scripts/cv-shortcodes.lua \
         --from=markdown-smart \
@@ -63,10 +75,10 @@ cv-pdf:
         -V linkedin="linkedin.com/in/cgmossa" \
         -V personal-site="ministats.dev" \
         -V avatar="/static/images/mossa-avatar-normal.png"
-    typst compile --root . {{build_dir}}/cv.typ static/cv.pdf
+    typst compile --root . cv.typ static/cv.pdf
     echo "static/cv.pdf — $(du -h static/cv.pdf | cut -f1 | tr -d ' ')"
 
-# Remove the generated PDF and intermediate typst output.
+# Remove the generated PDF and intermediate cv.md output.
 clean-cv-pdf:
     rm -rf {{build_dir}}
-    rm -f static/cv.pdf
+    rm -f static/cv.pdf cv.typ

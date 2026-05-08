@@ -46,7 +46,7 @@ jobs:
           sed -e '/^+++$/,/^+++$/d' \
               -e '/<figure class="cv-margin-photo"/,/<\/figure>/d' \
               content/cv/_index.md > .build/cv.md
-          pandoc .build/cv.md -o .build/cv.typ -t typst \
+          pandoc .build/cv.md -o cv.typ -t typst \
               --template=templates/pandoc-cv.typ \
               --lua-filter=scripts/cv-shortcodes.lua \
               --from=markdown-smart \
@@ -58,7 +58,7 @@ jobs:
               -V linkedin="linkedin.com/in/cgmossa" \
               -V personal-site="ministats.dev" \
               -V avatar="/static/images/mossa-avatar-normal.png"
-          typst compile --root . .build/cv.typ static/cv.pdf
+          typst compile --root . cv.typ static/cv.pdf
 
       - name: Build site
         run: zola build

@@ -10,7 +10,6 @@ $if(highlighting-definitions)$
 $highlighting-definitions$
 
 $endif$
-#set smartquote(enabled: false)
 
 #let cv-font = ("SF Pro Text", "Inter", "Helvetica Neue", "Helvetica", "Arial")
 
@@ -22,13 +21,17 @@ $endif$
   outset: (y: 2pt),
 )[#name]
 
+// Page header for the avatar must be set before page 1 begins layout
+// (typst can't add a header to a page that has already started). All
+// other style overrides go after the basic-resume show rule so they
+// cascade over its defaults.
 $if(avatar)$
 #set page(
   header: context if counter(page).get().first() == 1 {
     place(top + right, dx: 0in, dy: 0in, box(
       clip: true,
       radius: 50%,
-      image("$avatar$", width: 0.95in),
+      image("$avatar$", width: 0.45in),
     ))
   },
 )
@@ -45,6 +48,8 @@ $endif$$if(accent-color)$  accent-color: $accent-color$,
 $endif$  font: cv-font,
 )
 
+// Cascading style overrides applied after the show rule.
+#set smartquote(enabled: false)
 #set text(size: 13pt, font: cv-font)
 
 $body$
