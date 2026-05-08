@@ -23,10 +23,12 @@
 // cascade over its defaults.
 #set page(
   header: context if counter(page).get().first() == 1 {
-    place(top + right, dx: 0in, dy: 0in, box(
+    align(bottom + right, box(
       clip: true,
       radius: 50%,
-      image("/static/images/mossa-avatar-normal.png", width: 0.45in),
+      stroke: 1pt + rgb("d0d7de"),
+      fill: rgb("f6f8fa"),
+      image("/static/images/mossa-avatar-normal.png", width: 0.5in),
     ))
   },
 )
