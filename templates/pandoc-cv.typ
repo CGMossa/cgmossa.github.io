@@ -40,13 +40,7 @@ $if(avatar)$
   top + right,
   dx: -0.5in,
   dy: -0.5in,
-  circle(
-    radius: 0.475in,
-    stroke: 1.5pt + rgb("d0d7de"),
-    fill: rgb("f6f8fa"),
-    inset: 0pt,
-    box(clip: true, radius: 50%, image("$avatar$", width: 0.95in)),
-  ),
+  box(clip: true, radius: 50%, image("$avatar$", width: 0.95in)),
 )
 $endif$
 $body$
