@@ -12,6 +12,8 @@ $highlighting-definitions$
 $endif$
 #set smartquote(enabled: false)
 
+#let cv-font = ("Helvetica Neue", "Helvetica", "Arial")
+
 #show: resume.with(
   author: "$author$",
 $if(location)$  location: "$location$",
@@ -20,17 +22,22 @@ $endif$$if(github)$  github: "$github$",
 $endif$$if(linkedin)$  linkedin: "$linkedin$",
 $endif$$if(personal-site)$  personal-site: "$personal-site$",
 $endif$$if(accent-color)$  accent-color: $accent-color$,
-$endif$)
+$endif$  font: cv-font,
+)
+
+#set text(size: 13pt, weight: 500, font: cv-font)
 
 $if(avatar)$
 #place(
   top + right,
   dx: -0.5in,
   dy: -0.5in,
-  box(
-    clip: true,
-    radius: 50%,
-    image("$avatar$", width: 0.85in),
+  circle(
+    radius: 0.475in,
+    stroke: 1.5pt + rgb("d0d7de"),
+    fill: rgb("f6f8fa"),
+    inset: 0pt,
+    box(clip: true, radius: 50%, image("$avatar$", width: 0.95in)),
   ),
 )
 $endif$
