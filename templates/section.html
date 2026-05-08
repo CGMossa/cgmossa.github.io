@@ -5,7 +5,8 @@
 
 {% block content %}
 {% set show_section_nav = section.path == "/cv/" and section.toc | length > 0 %}
-<div class="{% if show_section_nav %}section-layout has-sidebar{% endif %}">
+{% set show_left_rail = section.path == "/cv/" %}
+<div class="{% if show_section_nav or show_left_rail %}section-layout has-sidebar{% endif %}{% if show_left_rail %} has-left-rail{% endif %}">
   <article class="section-page">
     <h1>{{ section.title }}</h1>
     {{ section.content | safe }}

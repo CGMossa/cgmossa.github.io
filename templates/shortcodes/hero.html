@@ -3,11 +3,18 @@
   {%- set orcid_url = config.extra.social_links.orcid -%}
   {%- set linkedin_url = config.extra.social_links.linkedin -%}
   <h1>{{ config.title }}</h1>
-  <p class="hero-subtitle">{{ subtitle }}</p>
-  <div class="hero-summary">{{ body | markdown | safe }}</div>
-  <div class="hero-links">
-    {%- if github_url -%}<a href="{{ github_url }}" class="btn btn-outline" target="_blank" rel="noopener">GitHub</a>{%- endif -%}
-    {%- if orcid_url -%}<a href="{{ orcid_url }}" class="btn btn-outline" target="_blank" rel="noopener">ORCID</a>{%- endif -%}
-    {%- if linkedin_url -%}<a href="{{ linkedin_url }}" class="btn btn-outline" target="_blank" rel="noopener">LinkedIn</a>{%- endif -%}
+  <div class="hero-body">
+    <div class="hero-content">
+      <p class="hero-subtitle">{{ subtitle }}</p>
+      <div class="hero-summary">{{ body | markdown | safe }}</div>
+      <div class="hero-links">
+        {%- if github_url -%}<a href="{{ github_url }}" class="btn btn-outline" target="_blank" rel="noopener">GitHub</a>{%- endif -%}
+        {%- if orcid_url -%}<a href="{{ orcid_url }}" class="btn btn-outline" target="_blank" rel="noopener">ORCID</a>{%- endif -%}
+        {%- if linkedin_url -%}<a href="{{ linkedin_url }}" class="btn btn-outline" target="_blank" rel="noopener">LinkedIn</a>{%- endif -%}
+      </div>
+    </div>
+    <div class="hero-portrait">
+      <img src="{{ get_url(path='images/mossa-avatar-normal.png') }}" alt="Mossa Merhi Reimert" loading="eager">
+    </div>
   </div>
 </section>

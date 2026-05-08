@@ -54,6 +54,11 @@ meta="2025–Present"
 
 {% end %}
 
+<figure class="cv-margin-photo" aria-hidden="true">
+  <img src="/images/mossa-portrait-2024.png" alt="">
+  <figcaption>c. 2024</figcaption>
+</figure>
+
 {% cv_entry(
 title="Postdoctoral Researcher",
 org="University of Copenhagen",
@@ -90,6 +95,11 @@ meta="2021–2022"
   quality in research workflows
 
 {% end %}
+
+<figure class="cv-margin-photo" aria-hidden="true">
+  <img src="/images/mossa-portrait.png" alt="">
+  <figcaption>Pre-PhD, c. 2018</figcaption>
+</figure>
 
 {% cv_entry(
 title="Lecturer / Researcher",

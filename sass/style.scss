@@ -216,6 +216,46 @@ pre {
   border-bottom: 1px solid var(--border);
   margin-bottom: 2.5rem;
 
+  &-body {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 2rem;
+    align-items: start;
+    margin-top: 1rem;
+
+    @media (max-width: 600px) {
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+    }
+  }
+
+  &-content {
+    min-width: 0;
+  }
+
+  &-portrait {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: var(--surface);
+    box-shadow: var(--shadow-card);
+    border: 2px solid var(--border);
+    flex-shrink: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    @media (max-width: 600px) {
+      width: 110px;
+      height: 110px;
+    }
+  }
+
   h1 {
     font-size: 2.4rem;
     font-weight: 700;
@@ -416,6 +456,43 @@ pre {
   }
 }
 
+.cv-margin-photo {
+  display: none;
+}
+
+@media (min-width: 1320px) {
+  .section-layout.has-left-rail .section-page {
+    position: relative;
+  }
+
+  .cv-margin-photo {
+    display: block;
+    position: absolute;
+    left: -220px;
+    width: 180px;
+    border-radius: $radius;
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+    border: 1px solid var(--border);
+    background: var(--surface);
+    margin-top: 0.4rem;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    figcaption {
+      padding: 0.4rem 0.6rem;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      text-align: center;
+      font-family: $font-body;
+    }
+  }
+}
+
 @media (min-width: 1320px) {
   .section-layout.has-sidebar {
     position: relative;
@@ -427,6 +504,35 @@ pre {
     top: calc(#{$nav-height} + 1.5rem);
     left: calc(50% + (#{$max-width} / 2) + 2rem);
     width: 220px;
+  }
+
+  .section-layout.has-left-rail .section-photos {
+    display: block;
+    position: fixed;
+    top: calc(#{$nav-height} + 1.5rem);
+    right: calc(50% + (#{$max-width} / 2) + 2rem);
+    width: 180px;
+  }
+}
+
+.cv-inline-photo {
+  float: left;
+  width: 130px;
+  margin: 0.2rem 1.2rem 0.6rem 0;
+  border-radius: $radius;
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--border);
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  @media (max-width: 600px) {
+    width: 100px;
+    margin: 0.2rem 0.9rem 0.4rem 0;
   }
 }
 
