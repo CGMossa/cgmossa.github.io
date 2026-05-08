@@ -425,7 +425,8 @@ pre {
     margin-bottom: 1.2rem;
     margin-top: 2.5rem;
   }
-  h1 + h2 { margin-top: 0; }
+  h1 + h2,
+  .section-header + h2 { margin-top: 0; }
   ul a {
     text-decoration: underline;
     text-underline-offset: 2px;
