@@ -22,6 +22,18 @@ $endif$
   outset: (y: 2pt),
 )[#name]
 
+$if(avatar)$
+#set page(
+  header: context if counter(page).get().first() == 1 {
+    place(top + right, dx: 0in, dy: 0in, box(
+      clip: true,
+      radius: 50%,
+      image("$avatar$", width: 0.95in),
+    ))
+  },
+)
+$endif$
+
 #show: resume.with(
   author: "$author$",
 $if(location)$  location: "$location$",
@@ -35,12 +47,4 @@ $endif$  font: cv-font,
 
 #set text(size: 13pt, font: cv-font)
 
-$if(avatar)$
-#place(
-  top + right,
-  dx: -0.5in,
-  dy: -0.5in,
-  box(clip: true, radius: 50%, image("$avatar$", width: 0.95in)),
-)
-$endif$
 $body$
