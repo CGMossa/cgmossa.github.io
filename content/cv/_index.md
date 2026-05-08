@@ -34,9 +34,50 @@ modelling, and scientific computing.
 - Teach and communicate effectively across researchers, developers, and
   students, from university courses to international conference talks
 
-## Skills
+## Education
 
-{{ skills(list="R, Rust, Foreign Function Interface (FFI), Git & GitHub Actions, MATLAB, Python, PyTorch, C#, C / C++, Bash, Typst, Statistical modelling, Scientific computing, Technical teaching") }}
+{% cv_entry(
+title="PhD in Veterinary Epidemiology",
+org="University of Copenhagen",
+meta="2019–2024"
+) %}
+
+- Modelled the spread of African Swine Fever between wild boar and domestic
+  pigs
+- Worked on simulator-based inference, ordinary differential equations, and
+  wildlife-livestock interface problems
+- Relevant coursework included epidemiology, spatial data analysis, network
+  analysis, and targeted maximum likelihood estimation
+
+{% end %}
+
+{{
+  cv_entry(
+    title="MSc in Statistics",
+    org="University of Copenhagen",
+    meta="2016–2018"
+  )
+}}
+
+{% cv_entry(
+title="BSc in Mathematics",
+org="University of Copenhagen",
+meta="2013–2015"
+) %}
+
+Statistics as study major.
+
+{% end %}
+
+{% cv_entry(
+title="BSc in Science and IT",
+org="University of Copenhagen",
+meta="2010–2013"
+) %}
+
+Specialisation in computational physics.
+
+{% end %}
 
 ## Experience
 
@@ -179,50 +220,85 @@ meta="2010–2013"
   )
 }}
 
-## Education
+## Publications
+
+### Peer-reviewed
+
+- **Modelling PRRS transmission between pig herds in Denmark and prediction of
+  interventions impact** (2025).
+  [doi:10.1016/j.prevetmed.2025.106692](https://doi.org/10.1016/j.prevetmed.2025.106692)
+- **Choice of landscape discretisation method affects the inferred rate of
+  spread in wildlife disease spread models** (2025).
+  [doi:10.1016/j.jtbi.2024.111963](https://doi.org/10.1016/j.jtbi.2024.111963)
+- **extendr: Frictionless bindings for R and Rust** (2024).
+  [doi:10.21105/joss.06394](https://doi.org/10.21105/joss.06394)
+- **Social network analysis reveals the failure of between-farm movement
+  restrictions to reduce Salmonella transmission** (2024).
+  [doi:10.3168/jds.2023-24554](https://doi.org/10.3168/jds.2023-24554)
+- **Using registry data to identify individual dairy cows with abnormal
+  patterns in routinely recorded somatic cell counts** (2024).
+  [doi:10.1016/j.jtbi.2023.111718](https://doi.org/10.1016/j.jtbi.2023.111718)
+
+### Preprints and submitted
+
+- **Assessing the Spatial and Temporal Risk of HPAIV Transmission to Danish
+  Cattle via Wild Birds** (2025).
+  [arXiv:2504.12432](https://doi.org/10.48550/arXiv.2504.12432)
+- **Spatial discretisation and anonymisation in R using CORINE land cover
+  data and the hexscape package**, with Matt Denwood, **Mossa Merhi Reimert**,
+  Carlijn Bogaardt, Maya Katrin Gussmann, Carsten Thure Kirkeby and Jess
+  Enright. *Submitted to Preventive Veterinary Medicine.*
+
+### In preparation
+
+- **Habitat-centric clustering of wildlife populations: methods and
+  implications for the population dynamics of wild boar**, with **Mossa Merhi
+  Reimert**, Maya Katrin Gussmann, Anette Ella Boklund, Philip Rasmussen and
+  Matt Denwood. *In preparation for Ecological Modelling.*
+
+## Research Software
 
 {% cv_entry(
-title="PhD in Veterinary Epidemiology",
-org="University of Copenhagen",
-meta="2019–2024"
+title="extendr",
+org="github.com/extendr/extendr",
+meta="Core maintainer · 2020–Present"
 ) %}
 
-- Modelled the spread of African Swine Fever between wild boar and domestic
-  pigs
-- Worked on simulator-based inference, ordinary differential equations, and
-  wildlife-livestock interface problems
-- Relevant coursework included epidemiology, spatial data analysis, network
-  analysis, and targeted maximum likelihood estimation
+Frictionless bindings between R and Rust. Core maintainer of the project and
+the wider tooling around the R-Rust bridge. Published in JOSS
+([doi:10.21105/joss.06394](https://doi.org/10.21105/joss.06394)) and supported
+by an R Consortium ISC grant for modern OOP tooling.
 
 {% end %}
 
-{{
-  cv_entry(
-    title="MSc in Statistics",
-    org="University of Copenhagen",
-    meta="2016–2018"
-  )
-}}
-
 {% cv_entry(
-title="BSc in Mathematics",
-org="University of Copenhagen",
-meta="2013–2015"
+title="miniextendr",
+org="github.com/cgmossa/miniextendr",
+meta="Author · 2024–Present"
 ) %}
 
-Statistics as study major.
+A Rust-R interoperability framework for building R packages with Rust
+backends. Includes ExternalPtr wrappers, ALTREP support, and CRAN-ready
+packaging.
 
 {% end %}
 
 {% cv_entry(
-title="BSc in Science and IT",
-org="University of Copenhagen",
-meta="2010–2013"
+title="hexscape",
+org="R package",
+meta="Co-author"
 ) %}
 
-Specialisation in computational physics.
+Spatial discretisation and anonymisation in R using CORINE land cover data.
+Companion to the submitted Preventive Veterinary Medicine manuscript.
 
 {% end %}
+
+## Grants
+
+- Accepted by the R Consortium Infrastructure Steering Committee (ISC) for
+  **"extendr: Modern OOP tools"** (2025), covering the `vctrs/S3 Support` and
+  `S7 Support` milestones
 
 ## Teaching Portfolio
 
@@ -262,43 +338,6 @@ one-on-one student support across more than seven years of continuous
 teaching.
 
 {% end %}
-
-## Online Learning
-
-- Completed 110 DataCamp courses, 9 tracks, and 37 projects across R, SQL,
-  machine learning, and statistics
-  ([portfolio](https://www.datacamp.com/portfolio/cgmossa))
-- Completed the Exercism Rust track with 83 problems and iterative
-  review-driven refinement
-  ([profile](https://exercism.org/profiles/CGMossa))
-
-## Publications
-
-- **Modelling PRRS transmission between pig herds in Denmark and prediction of
-  interventions impact** (2025).
-  [doi:10.1016/j.prevetmed.2025.106692](https://doi.org/10.1016/j.prevetmed.2025.106692)
-- **Choice of landscape discretisation method affects the inferred rate of
-  spread in wildlife disease spread models** (2025).
-  [doi:10.1016/j.jtbi.2024.111963](https://doi.org/10.1016/j.jtbi.2024.111963)
-- **Assessing the Spatial and Temporal Risk of HPAIV Transmission to Danish
-  Cattle via Wild Birds** (2025).
-  [arXiv:2504.12432](https://doi.org/10.48550/arXiv.2504.12432)
-- **extendr: Frictionless bindings for R and Rust** (2024).
-  [doi:10.21105/joss.06394](https://doi.org/10.21105/joss.06394)
-- **Social network analysis reveals the failure of between-farm movement
-  restrictions to reduce Salmonella transmission** (2024).
-  [doi:10.3168/jds.2023-24554](https://doi.org/10.3168/jds.2023-24554)
-- **Using registry data to identify individual dairy cows with abnormal
-  patterns in routinely recorded somatic cell counts** (2024).
-  [doi:10.1016/j.jtbi.2023.111718](https://doi.org/10.1016/j.jtbi.2023.111718)
-- **Spatial discretisation and anonymisation in R using CORINE land cover
-  data and the hexscape package**, with Matt Denwood, Mossa Merhi Reimert,
-  Carlijn Bogaardt, Maya Katrin Gussmann, Carsten Thure Kirkeby and Jess
-  Enright. *Submitted to Preventive Veterinary Medicine.*
-- **Habitat-centric clustering of wildlife populations: methods and
-  implications for the population dynamics of wild boar**, with Mossa Merhi
-  Reimert, Maya Katrin Gussmann, Anette Ella Boklund, Philip Rasmussen and
-  Matt Denwood. *In preparation for Ecological Modelling.*
 
 ## Conferences
 
@@ -399,30 +438,15 @@ Attended.
 - Partner-sponsored developer at A2-Ai in the RSMF-backed project
   [Enabling the Next Generation of Contributors to R](https://blog.r-project.org/2025/12/17/rsmf-enabling-the-next-generation-of-contributors-to-r/)
 
-## Grants
-
-- Accepted by the R Consortium Infrastructure Steering Committee (ISC) for
-  **"extendr: Modern OOP tools"** (2025), covering the `vctrs/S3 Support` and
-  `S7 Support` milestones
-
 ## Awards
 
 - Member of the winning team at Aarhus' COVID-19 Datathon (2021), a
   weekend-long data-analysis challenge hosted jointly by MIT, Imperial College
   London, and Aarhus University
 
-## Personal
+## Skills
 
-- Father of two
-- Avid collector of custom mechanical keyboards
-
-## Links
-
-- {{ icon_link(icon="orcid", url="https://orcid.org/0009-0007-9297-1523", label="ORCID: 0009-0007-9297-1523") }}
-- {{ icon_link(icon="github", url="https://github.com/cgmossa", label="GitHub") }}
-- {{ icon_link(icon="linkedin", url="https://www.linkedin.com/in/cgmossa", label="LinkedIn") }}
-- {{ icon_link(icon="datacamp", url="https://www.datacamp.com/portfolio/cgmossa", label="DataCamp portfolio") }}
-- {{ icon_link(icon="exercism", url="https://exercism.org/profiles/CGMossa", label="Exercism profile") }}
+{{ skills(list="R, Rust, Foreign Function Interface (FFI), Git & GitHub Actions, MATLAB, Python, PyTorch, C#, C / C++, Bash, Typst, Statistical modelling, Scientific computing, Technical teaching") }}
 
 ## Coursework
 
@@ -481,3 +505,25 @@ Attended.
 - Mathematics for Physicists
 
 {% end %}
+
+## Online Learning
+
+- Completed 110 DataCamp courses, 9 tracks, and 37 projects across R, SQL,
+  machine learning, and statistics
+  ([portfolio](https://www.datacamp.com/portfolio/cgmossa))
+- Completed the Exercism Rust track with 83 problems and iterative
+  review-driven refinement
+  ([profile](https://exercism.org/profiles/CGMossa))
+
+## Personal
+
+- Father of two
+- Avid collector of custom mechanical keyboards
+
+## Links
+
+- {{ icon_link(icon="orcid", url="https://orcid.org/0009-0007-9297-1523", label="ORCID: 0009-0007-9297-1523") }}
+- {{ icon_link(icon="github", url="https://github.com/cgmossa", label="GitHub") }}
+- {{ icon_link(icon="linkedin", url="https://www.linkedin.com/in/cgmossa", label="LinkedIn") }}
+- {{ icon_link(icon="datacamp", url="https://www.datacamp.com/portfolio/cgmossa", label="DataCamp portfolio") }}
+- {{ icon_link(icon="exercism", url="https://exercism.org/profiles/CGMossa", label="Exercism profile") }}
