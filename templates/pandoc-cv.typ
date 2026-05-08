@@ -12,7 +12,7 @@ $highlighting-definitions$
 $endif$
 #set smartquote(enabled: false)
 
-#let cv-font = ("Helvetica Neue", "Helvetica", "Arial")
+#let cv-font = ("SF Pro Text", "Inter", "Helvetica Neue", "Helvetica", "Arial")
 
 #let skill-chip(name) = box(
   fill: rgb("f6f8fa"),
@@ -33,7 +33,7 @@ $endif$$if(accent-color)$  accent-color: $accent-color$,
 $endif$  font: cv-font,
 )
 
-#set text(size: 13pt, weight: 500, font: cv-font)
+#set text(size: 13pt, font: cv-font)
 
 $if(avatar)$
 #place(
