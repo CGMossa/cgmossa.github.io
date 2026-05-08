@@ -314,12 +314,16 @@ pre {
   }
 }
 
-.section-sidebar .cv-download {
-  display: block;
-  width: fit-content;
-  margin: 0 0 1rem auto;
-  .link-icon {
-    height: 2.5rem;
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  h1 { margin: 0; }
+  .cv-download {
+    flex: 0 0 auto;
+    .link-icon { height: 2rem; }
   }
 }
 

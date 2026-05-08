@@ -8,7 +8,16 @@
 {% set show_left_rail = section.path == "/cv/" %}
 <div class="{% if show_section_nav or show_left_rail %}section-layout has-sidebar{% endif %}{% if show_left_rail %} has-left-rail{% endif %}">
   <article class="section-page">
+    {% if section.path == "/cv/" %}
+    <div class="section-header">
+      <h1>{{ section.title }}</h1>
+      <a href="{{ get_url(path='cv.pdf') }}" class="icon-link cv-download" aria-label="Download CV as PDF" download>
+        <img src="{{ get_url(path='icons/pdf.svg') }}" alt="" class="link-icon">
+      </a>
+    </div>
+    {% else %}
     <h1>{{ section.title }}</h1>
+    {% endif %}
     {{ section.content | safe }}
 
     {% if paginator is defined %}
@@ -66,11 +75,6 @@
 
   {% if show_section_nav %}
   <aside class="section-sidebar" aria-label="Section navigation">
-    {% if section.path == "/cv/" %}
-    <a href="{{ get_url(path='cv.pdf') }}" class="icon-link cv-download" aria-label="Download CV as PDF" download>
-      <img src="{{ get_url(path='icons/pdf.svg') }}" alt="" class="link-icon">
-    </a>
-    {% endif %}
     <nav class="section-nav">
       <ul>
         {% for heading in section.toc %}
