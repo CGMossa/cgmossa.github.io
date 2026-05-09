@@ -71,9 +71,12 @@ cv-pdf:
         -V author="Mossa Merhi Reimert" \
         -V location="Copenhagen, Denmark" \
         -V email="mossa@a2-ai.com" \
+        -V phone="+45 25 71 13 42" \
+        -V phone-url="tel:+4525711342" \
         -V github="github.com/cgmossa" \
         -V linkedin="linkedin.com/in/cgmossa" \
         -V personal-site="ministats.dev" \
+        -V orcid="0009-0007-9297-1523" \
         -V avatar="/static/images/mossa-avatar-normal.png"
     typst compile --root . cv.typ static/cv.pdf
     echo "static/cv.pdf — $(du -h static/cv.pdf | cut -f1 | tr -d ' ')"

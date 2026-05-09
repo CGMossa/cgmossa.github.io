@@ -4,48 +4,201 @@
 // Do not edit the generated .typ file directly; edit the markdown and
 // rebuild via `just cv-pdf`.
 
-#import "@preview/basic-resume:0.2.9": *
+#import "@preview/fontawesome:0.6.0": *
+#import "@preview/linguify:0.5.0": *
+#import "@preview/scienceicons:0.1.0": orcid-icon
 
 
-#let cv-font = ("SF Pro Text", "Inter", "Helvetica Neue", "Helvetica", "Arial")
+#let cv-font = "Avenir Next"
+#let cv-accent = rgb("1f6f78")
+#let cv-link = rgb("6f42c1")
+#let cv-muted = rgb("57606a")
+#let cv-border = rgb("d0d7de")
 
 #let skill-chip(name) = box(
   fill: rgb("f6f8fa"),
-  stroke: 0.5pt + rgb("d0d7de"),
+  stroke: 0.45pt + cv-border,
   inset: (x: 6pt, y: 3pt),
   radius: 4pt,
-  outset: (y: 2pt),
+  outset: (y: 1.8pt),
 )[#name]
 
-// Page header for the avatar must be set before page 1 begins layout
-// (typst can't add a header to a page that has already started). All
-// other style overrides go after the basic-resume show rule so they
-// cascade over its defaults.
 #set page(
-  header: context if counter(page).get().first() == 1 {
-    align(bottom + right, box(
-      clip: true,
-      radius: 50%,
-      stroke: 1pt + rgb("d0d7de"),
-      fill: rgb("f6f8fa"),
-      image("/static/images/mossa-avatar-normal.png", width: 0.5in),
-    ))
-  },
+  paper: "a4",
+  margin: (x: 0.58in, y: 0.54in),
 )
-
-#show: resume.with(
-  author: "Mossa Merhi Reimert",
-  location: "Copenhagen, Denmark",
-  email: "mossa@a2-ai.com",
-  github: "github.com/cgmossa",
-  linkedin: "linkedin.com/in/cgmossa",
-  personal-site: "ministats.dev",
-  font: cv-font,
-)
-
-// Cascading style overrides applied after the show rule.
+#set document(author: "Mossa Merhi Reimert", title: "Mossa Merhi Reimert")
 #set smartquote(enabled: false)
-#set text(size: 13pt, font: cv-font)
+#set text(size: 10.25pt, font: cv-font, lang: "en", ligatures: false)
+#set par(justify: true, leading: 0.54em)
+#set list(indent: 0.72em, body-indent: 0.36em, spacing: 0.32em)
+
+#show link: set text(fill: cv-link)
+#show strong: set text(weight: 300)
+
+#show heading.where(level: 2): it => block(above: 0.7em, below: 0.32em)[
+  #grid(
+    columns: (auto, 1fr),
+    column-gutter: 0.7em,
+    align: horizon,
+    [#text(size: 10.5pt, weight: 500, fill: cv-accent)[#smallcaps(it.body)]],
+    [#line(length: 100%, stroke: 0.65pt + cv-border)],
+  )
+]
+
+#show heading.where(level: 3): it => block(above: 0.58em, below: 0.16em)[
+  #text(size: 10.45pt, weight: 500, fill: cv-accent)[#it.body]
+]
+
+#let field(value) = {
+  if value == none or value == "" { [] } else { value }
+}
+
+#let has-field(value) = value != none and value != ""
+
+#let contact-item(value, prefix: none, url: none) = {
+  if value == none or value == "" {
+    none
+  } else if url == none or url == "" {
+    value
+  } else if prefix == none {
+    link(url)[#value]
+  } else {
+    link(url)[#prefix#value]
+  }
+}
+
+#let contact-icon(path) = box(
+  width: 0.9em,
+  height: 0.9em,
+  baseline: 16%,
+  image(path, width: 0.9em, height: 0.9em),
+)
+
+#let contact-with-icon(path, body) = box[
+  #contact-icon(path)#h(0.22em)#body
+]
+
+#let entry(title: none, dates: none, company: none, location: none) = block(
+  above: 0.52em,
+  below: 0.12em,
+)[
+  #grid(
+    columns: (1fr, auto),
+    column-gutter: 1em,
+    align: (left, right + top),
+    [
+      #if has-field(title) [
+        #text(size: 10.6pt, weight: 500)[#title]
+      ]
+      #if has-field(company) or has-field(location) [
+        #v(-0.8em)
+        #text(size: 9.3pt, fill: cv-muted)[
+          #if has-field(company) [#company]
+          #if has-field(company) and has-field(location) [ #h(0.32em)·#h(0.32em) ]
+          #if has-field(location) [#emph[#location]]
+        ]
+      ]
+    ],
+    [#if has-field(dates) [#text(size: 9.15pt, fill: cv-muted)[#dates]]],
+  )
+]
+
+#let edu(
+  institution: none,
+  dates: none,
+  degree: none,
+  gpa: none,
+  location: none,
+  consistent: false,
+) = entry(
+  title: degree,
+  dates: dates,
+  company: institution,
+  location: location,
+)
+
+#let work(
+  title: none,
+  dates: none,
+  company: none,
+  location: none,
+) = entry(
+  title: title,
+  dates: dates,
+  company: company,
+  location: location,
+)
+
+#let generic-two-by-two(
+  top-left: none,
+  top-right: none,
+  bottom-left: none,
+  bottom-right: none,
+) = entry(
+  title: top-left,
+  dates: top-right,
+  company: bottom-left,
+  location: bottom-right,
+)
+
+#let course-group(title, dates, body) = block(
+  above: 0.42em,
+  below: 0.15em,
+)[
+  #set par(leading: 0.5em, justify: true)
+  #text(size: 8.4pt)[
+    #text(weight: 500)[#title]
+    #h(0.22em)#text(fill: cv-muted)[#dates]
+    #h(0.38em)#text(fill: cv-muted)[#body]
+  ]
+]
+
+#let link-icon(path, body) = box[
+  #box(baseline: 16%, image(path, height: 0.85em))#h(0.22em)#body
+]
+
+#grid(
+  columns: (1fr, auto),
+  column-gutter: 1em,
+  align: horizon,
+  [
+    #text(size: 21pt, weight: 500)[Mossa Merhi Reimert]
+    #v(0.24em)
+    #text(size: 8.35pt, fill: cv-muted)[
+      #grid(
+        columns: (auto, auto, auto, auto),
+        column-gutter: 1em,
+        row-gutter: 0.28em,
+        align: left + horizon,
+        contact-item([+45 25 71 13 42], url: "tel:+4525711342"),
+        [Copenhagen, Denmark],
+        contact-item(contact-with-icon("/static/icons/mail.svg", [#("mossa@a2-ai.com")]), url: "mailto:mossa@a2-ai.com"),
+        contact-item([ministats.dev], url: "https://ministats.dev"),
+        contact-item(contact-with-icon("/static/icons/github.svg", [GitHub]), url: "https://github.com/cgmossa"),
+        contact-item(contact-with-icon("/static/icons/linkedin.svg", [LinkedIn]), url: "https://linkedin.com/in/cgmossa"),
+        contact-item(
+          [ORCID],
+          prefix: [#orcid-icon(color: cv-link, height: 0.95em)#h(0.18em)],
+          url: "https://orcid.org/0009-0007-9297-1523",
+        ),
+        [],
+      )
+    ]
+  ],
+  [
+    #box(
+      clip: true,
+      radius: 4em,
+      stroke: 0.8pt + cv-border,
+      fill: rgb("f6f8fa"),
+      image("/static/images/mossa-avatar-normal.png", width: 6em),
+    )
+  ],
+)
+#v(0.4em)
+#line(length: 100%, stroke: 0.65pt + cv-border)
+#v(0.58em)
 
 == Summary
 <summary>
@@ -53,13 +206,23 @@ Senior Scientific Software Engineer at #link("https://a2-ai.com")[A2-Ai]. PhD in
 
 == Highlights
 <highlights>
-- Build and maintain R and Rust tooling that needs to be fast, reliable, and ready for real use
-- Bring a deep foundation in mathematics, probability theory, and statistics, from measure theory and stochastic processes to Bayesian inference and causal reasoning
-- Turn research questions into statistical models and then into maintainable software
-- Develop disease-spread models across wildlife and livestock populations, with work on spatial discretisation, surveillance, and control strategies
-- Work effectively across institutions, disciplines, and international collaborations
-- Teach and communicate effectively across researchers, developers, and students, from university courses to international conference talks
 
+#[#set list(spacing: 0.7em)
+- Build and maintain R and Rust tooling that needs to be fast, reliable,
+  and ready for real use
+- Bring a deep foundation in mathematics, probability theory, and
+  statistics, from measure theory and stochastic processes to Bayesian
+  inference and causal reasoning
+- Turn research questions into statistical models and then into
+  maintainable software
+- Develop disease-spread models across wildlife and livestock
+  populations, with work on spatial discretisation, surveillance, and
+  control strategies
+- Work effectively across institutions, disciplines, and international
+  collaborations
+- Teach and communicate effectively across researchers, developers, and
+  students, from university courses to international conference talks
+]
 == Education
 <education>
 
@@ -184,21 +347,49 @@ Specialisation in computational physics.
 <publications>
 === Peer-reviewed
 <peer-reviewed>
-- #strong[Modelling PRRS transmission between pig herds in Denmark and prediction of interventions impact] (2025). #link("https://doi.org/10.1016/j.prevetmed.2025.106692")[doi:10.1016/j.prevetmed.2025.106692]
-- #strong[Choice of landscape discretisation method affects the inferred rate of spread in wildlife disease spread models] (2025). #link("https://doi.org/10.1016/j.jtbi.2024.111963")[doi:10.1016/j.jtbi.2024.111963]
-- #strong[extendr: Frictionless bindings for R and Rust] (2024). #link("https://doi.org/10.21105/joss.06394")[doi:10.21105/joss.06394]
-- #strong[Social network analysis reveals the failure of between-farm movement restrictions to reduce Salmonella transmission] (2024). #link("https://doi.org/10.3168/jds.2023-24554")[doi:10.3168/jds.2023-24554]
-- #strong[Using registry data to identify individual dairy cows with abnormal patterns in routinely recorded somatic cell counts] (2024). #link("https://doi.org/10.1016/j.jtbi.2023.111718")[doi:10.1016/j.jtbi.2023.111718]
 
+#[#set list(spacing: 0.78em)
+#set par(leading: 0.62em)
+- #strong[Modelling PRRS transmission between pig herds in Denmark and
+  prediction of interventions impact] (2025).
+  #link("https://doi.org/10.1016/j.prevetmed.2025.106692")[doi:10.1016/j.prevetmed.2025.106692]
+- #strong[Choice of landscape discretisation method affects the inferred
+  rate of spread in wildlife disease spread models] (2025).
+  #link("https://doi.org/10.1016/j.jtbi.2024.111963")[doi:10.1016/j.jtbi.2024.111963]
+- #strong[extendr: Frictionless bindings for R and Rust] (2024).
+  #link("https://doi.org/10.21105/joss.06394")[doi:10.21105/joss.06394]
+- #strong[Social network analysis reveals the failure of between-farm
+  movement restrictions to reduce Salmonella transmission] (2024).
+  #link("https://doi.org/10.3168/jds.2023-24554")[doi:10.3168/jds.2023-24554]
+- #strong[Using registry data to identify individual dairy cows with
+  abnormal patterns in routinely recorded somatic cell counts] (2024).
+  #link("https://doi.org/10.1016/j.jtbi.2023.111718")[doi:10.1016/j.jtbi.2023.111718]
+]
 === Preprints and submitted
 <preprints-and-submitted>
-- #strong[Assessing the Spatial and Temporal Risk of HPAIV Transmission to Danish Cattle via Wild Birds] (2025). #link("https://doi.org/10.48550/arXiv.2504.12432")[arXiv:2504.12432]
-- #strong[Spatial discretisation and anonymisation in R using CORINE land cover data and the hexscape package], with Matt Denwood, #strong[Mossa Merhi Reimert], Carlijn Bogaardt, Maya Katrin Gussmann, Carsten Thure Kirkeby and Jess Enright. #emph[Submitted to Preventive Veterinary Medicine.]
 
+#[#set list(spacing: 0.78em)
+#set par(leading: 0.62em)
+- #strong[Assessing the Spatial and Temporal Risk of HPAIV Transmission
+  to Danish Cattle via Wild Birds] (2025).
+  #link("https://doi.org/10.48550/arXiv.2504.12432")[arXiv:2504.12432]
+- #strong[Spatial discretisation and anonymisation in R using CORINE
+  land cover data and the hexscape package], with Matt Denwood,
+  #strong[Mossa Merhi Reimert], Carlijn Bogaardt, Maya Katrin Gussmann,
+  Carsten Thure Kirkeby and Jess Enright. #emph[Submitted to Preventive
+  Veterinary Medicine.]
+]
 === In preparation
 <in-preparation>
-- #strong[Habitat-centric clustering of wildlife populations: methods and implications for the population dynamics of wild boar], with #strong[Mossa Merhi Reimert], Maya Katrin Gussmann, Anette Ella Boklund, Philip Rasmussen and Matt Denwood. #emph[In preparation for Ecological Modelling.]
 
+#[#set list(spacing: 0.78em)
+#set par(leading: 0.62em)
+- #strong[Habitat-centric clustering of wildlife populations: methods
+  and implications for the population dynamics of wild boar], with
+  #strong[Mossa Merhi Reimert], Maya Katrin Gussmann, Anette Ella
+  Boklund, Philip Rasmussen and Matt Denwood. #emph[In preparation for
+  Ecological Modelling.]
+]
 == Research Software
 <research-software>
 
@@ -229,15 +420,20 @@ Spatial discretisation and anonymisation in R using CORINE land cover data. Comp
 
 == Teaching Portfolio
 <teaching-portfolio>
-=== External Lecturer, Artificial Neural Networks and Deep Learning
-#emph[DIS Study Abroad · Copenhagen · Spring 2025]
 
+#block[#work(
+  title: "External Lecturer, Artificial Neural Networks and Deep Learning",
+  dates: "Copenhagen · Spring 2025",
+  company: "DIS Study Abroad",
+)]
 - Designed and delivered an upper-division course on artificial neural networks and deep learning for visiting international students
 - Covered foundations through modern architectures, with hands-on implementation work alongside the theoretical material
 
-=== Teaching Assistant
-#emph[University of Copenhagen · 2011--2018]
-
+#block[#work(
+  title: "Teaching Assistant",
+  dates: "2011–2018",
+  company: "University of Copenhagen",
+)]
 Taught and supported a broad range of undergraduate and graduate courses in the Department of Mathematical Sciences and the Department of Computer Science, including:
 
 - Databases and web programming
@@ -253,18 +449,24 @@ Responsibilities spanned exercise sessions, problem-set design, grading, and one
 <conferences>
 
 #grid(
-  columns: 2,
+  columns: 1,
   gutter: 1em,
   [
-=== Typst Meetup Berlin 2026
-#emph[Typst · Berlin · 28 February 2026 · 14:30 CET]
 
+#block[#work(
+  title: "Typst Meetup Berlin 2026",
+  dates: "Berlin · 28 February 2026 · 14:30 CET",
+  company: "Typst",
+)]
 Attended.
   ],
   [
-=== Cascadia R Conf 2025
-#emph[cascadiarconf.org · Portland, OR · 20 June 2025]
 
+#block[#work(
+  title: "Cascadia R Conf 2025",
+  dates: "Portland, OR · 20 June 2025",
+  company: "cascadiarconf.org",
+)]
 Co-authored
 #link("https://josiahparry.github.io/2025-cascadia-rust-for-r-devs/")[workshop material]
 with Josiah Parry for two workshops:
@@ -274,17 +476,23 @@ and
 using extendr.
   ],
   [
-=== Scientific Computing in Rust 2024
-#emph[scientificcomputing.rs · 18 July 2024 · Online]
 
+#block[#work(
+  title: "Scientific Computing in Rust 2024",
+  dates: "18 July 2024 · Online",
+  company: "scientificcomputing.rs",
+)]
 Talk: \"extendr: Frictionless bindings for R and Rust.\" Live and online
 presentation (10 min). Hosted by organisers from University College
 London (UK) and University of Colorado Boulder (USA).
   ],
   [
-=== GeoVet 2023
-#emph[Silvi Marina, Teramo, Italy · 20 September 2023]
 
+#block[#work(
+  title: "GeoVet 2023",
+  dates: "20 September 2023",
+  company: "Silvi Marina, Teramo, Italy",
+)]
 Senior oral presentation (20 min + 5 min discussion): \"Choice of
 Landscape Discretisation Affects the Rate of Spread in Wildlife Disease
 Models.\" International Conference of Spatial Epidemiology,
@@ -292,30 +500,42 @@ Geostatistics and GIS applied to animal health, public health, and food
 safety.
   ],
   [
-=== ISVEE 16
-#emph[Halifax, Canada · 7--12 August 2022]
 
+#block[#work(
+  title: "ISVEE 16",
+  dates: "7–12 August 2022",
+  company: "Halifax, Canada",
+)]
 Oral presentation: \"An ecological process-based model of wild boar.\"
 16th International Symposium of Veterinary Epidemiology and Economics.
   ],
   [
-=== ModAH 2021
-#emph[INRAE, Nantes, France · 2 July 2021 · Online]
 
+#block[#work(
+  title: "ModAH 2021",
+  dates: "2 July 2021 · Online",
+  company: "INRAE, Nantes, France",
+)]
 Talk: \"Influence of ecological processes within disease models.\" Live
 presentation (webinar). Modelling in Animal Health conference.
   ],
   [
-=== Det 41. symposium i anvendt statistik
-#emph[University of Copenhagen · 28--30 January 2019]
 
+#block[#work(
+  title: "Det 41. symposium i anvendt statistik",
+  dates: "28–30 January 2019",
+  company: "University of Copenhagen",
+)]
 Attended.
 #link("https://www.statistiksymposium.dk/")[statistiksymposium.dk]
   ],
   [
-=== SAFJR 2019
-#emph[2019]
 
+#block[#work(
+  title: "SAFJR 2019",
+  dates: "2019",
+  company: "",
+)]
 Attended.
   ],
 )
@@ -335,62 +555,13 @@ Attended.
 <coursework>
 
 #[
-#set text(size: 8.5pt)
-#grid(
-  columns: 3,
-  gutter: 1em,
-  [
-=== MSc in Statistics (2016--2018)
-- Discrete Models
-- Regression
-- Project in Statistics
-- Advanced Probability Theory 1
-- Advanced Probability Theory 2
-- Bayesian Statistics
-- Causality
-- Computational Statistics
-- Monte Carlo Methods in Insurance and Finance
-- Sparse Learning
-  ],
-  [
-=== BSc in Mathematics (2013--2015)
-- Discrete Mathematics
-- Probability Theory and Statistics
-- Algebra 1
-- Geometry 1
-- Analysis 2
-- Measures and Integrals
-- Statistics 1
-- Statistics 2
-- Stochastic Processes
-- Graphical Models
-  ],
-  [
-=== BSc in Science & IT (2010--2013)
-- Introduction to Mathematics for Science
-- Modelling in Science
-- Linear Algebra in Science
-- Programming and Problem Solving
-- Analysis 0
-- Algorithms and Data Structures
-- Databases and Data Mining
-- Statistical Models in Science
-- Introduction to Numerical Analysis
-- Numerical Solution of Differential Equations: Finite Difference
-  Methods
-- Project Course: Science and IT
-- Philosophy of Computer Science
-- Electrodynamics and Waves
-- Quantum Mechanics 1
-- Introduction to Mechanics and Relativity Theory
-- Classical Mechanics
-- Thermodynamics and Project
-- Electromagnetism
-- Analytical Mechanics and Chaos
-- Analysis 1
-- Mathematics for Physicists
-  ],
-)
+
+#course-group([MSc in Statistics], [2016–2018], [Discrete Models\; Regression\; Project in Statistics\; Advanced Probability Theory 1\; Advanced Probability Theory 2\; Bayesian Statistics\; Causality\; Computational Statistics\; Monte Carlo Methods in Insurance and Finance\; Sparse Learning.])
+
+#course-group([BSc in Mathematics], [2013–2015], [Discrete Mathematics\; Probability Theory and Statistics\; Algebra 1\; Geometry 1\; Analysis 2\; Measures and Integrals\; Statistics 1\; Statistics 2\; Stochastic Processes\; Graphical Models.])
+
+#course-group([BSc in Science & IT], [2010–2013], [Introduction to Mathematics for Science\; Modelling in Science\; Linear Algebra in Science\; Programming and Problem Solving\; Analysis 0\; Algorithms and Data Structures\; Databases and Data Mining\; Statistical Models in Science\; Introduction to Numerical Analysis\; Numerical Solution of Differential Equations: Finite Difference Methods\; Project Course: Science and IT\; Philosophy of Computer Science\; Electrodynamics and Waves\; Quantum Mechanics 1\; Introduction to Mechanics and Relativity Theory\; Classical Mechanics\; Thermodynamics and Project\; Electromagnetism\; Analytical Mechanics and Chaos\; Analysis 1\; Mathematics for Physicists.])
+
 ]
 == Online Learning
 <online-learning>
@@ -406,9 +577,5 @@ Attended.
 <links>
 
 #align(center)[
-#link("https://orcid.org/0009-0007-9297-1523")[ORCID: 0009-0007-9297-1523]
-· #link("https://github.com/cgmossa")[GitHub] ·
-#link("https://www.linkedin.com/in/cgmossa")[LinkedIn] ·
-#link("https://www.datacamp.com/portfolio/cgmossa")[DataCamp portfolio]
-· #link("https://exercism.org/profiles/CGMossa")[Exercism profile]
+#link("https://orcid.org/0009-0007-9297-1523")[#link-icon("/static/icons/orcid.svg", [ORCID: 0009-0007-9297-1523])] #h(0.5em)·#h(0.5em) #link("https://github.com/cgmossa")[#link-icon("/static/icons/github.svg", [GitHub])] #h(0.5em)·#h(0.5em) #link("https://www.linkedin.com/in/cgmossa")[#link-icon("/static/icons/linkedin.svg", [LinkedIn])] #h(0.5em)·#h(0.5em) #link("https://www.datacamp.com/portfolio/cgmossa")[#link-icon("/static/icons/datacamp.svg", [DataCamp portfolio])] #h(0.5em)·#h(0.5em) #link("https://exercism.org/profiles/CGMossa")[#link-icon("/static/icons/exercism.svg", [Exercism profile])]
 ]
